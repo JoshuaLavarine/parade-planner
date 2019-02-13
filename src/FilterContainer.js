@@ -9,7 +9,7 @@ class FilterContainer extends Component {
   render() {
     return (
       <div>
-      HEY MOTHA FACKA
+    
       </div>
     )
   }
