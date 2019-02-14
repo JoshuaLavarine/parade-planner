@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Filter from './Filter'
+import paradeData from './paradeData';
 
 class FilterContainer extends Component {
   constructor() {
@@ -9,7 +10,7 @@ class FilterContainer extends Component {
   render() {
     return (
       <div>
-    
+        <Filter />
       </div>
     )
   }

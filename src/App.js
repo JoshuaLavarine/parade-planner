@@ -9,14 +9,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      parades : [],
-      restaurants : []
+      parades : paradeData.parades,
+      restaurants : restaurantData.restaurants
     }
   }
+  
   render() {
     return (
       <div className="App">
-      <FilterContainer />
+      <FilterContainer location={this.state.parades} />
       <CardContainer />
       </div>
     );
