@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import Filter from './Filter'
-import paradeData from './paradeData';
+import CardContainer from './CardContainer';
 
 class FilterControls extends Component {
   constructor() {
     super();
+    this.state = {
+      location: '',
+      time: '',
+      date: ''
+    }
   }
+
+  //Write methods to filter out data based state strings
+  //Methods will RETURN our derrived data and pass down to child component
 
   render() {
     return (
       <div>
-        <Filter />
+        <CardContainer />
       </div>
     )
   }
 }
 
-export default FilterContainer;
+export default FilterControls;
