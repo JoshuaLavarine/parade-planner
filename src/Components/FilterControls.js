@@ -20,12 +20,28 @@ class FilterControls extends Component {
       location: selectedLocation
     }, this.filterByLocation)
   }
-//this second argument is telling the getClickedLocation to set the state before it runs the method, so that we can grab what we thing were grabbing(all the objects)
-  filterByLocation = ()=> {
-    return this.props.parades.filter((parade)=>{
+
+  
+  //this second argument is telling the getClickedLocation to set the state before it runs the method, so that we can grab what we thing were grabbing(all the objects)
+  filterByLocation = () => {
+    return this.props.parades.filter(parade => {
       return parade.location === this.state.location
     })
   }
+  
+  getClickedTime = (event) => {
+    let selectedTime = event.target.value;
+    this.setState({
+      time: selectedTime
+    }, this.filterByTime)
+  }
+  
+  filterByTime = () => {
+    return this.props.parades.filter(parade => {
+      return parade.dayOrNight === this.state.time
+    })
+  }
+
  
 
 
@@ -35,6 +51,11 @@ class FilterControls extends Component {
       <div>
         <CardContainer filteredParades={this.filterByLocation()}/>
         <button value="Metairie" onClick={this.getClickedLocation}>METARIE</button>
+        <select onChange={this.getClickedTime}>
+          <option value="">--Select Time--</option>
+          <option value="am">AM</option>
+          <option value="pm">PM</option>
+        </select>
       </div>
     )
   }
