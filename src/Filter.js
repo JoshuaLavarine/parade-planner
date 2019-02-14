@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+// import paradeData from './paradeData'
 
 class Filter extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <h1>hi</h1>
+      <div>
+        <select>
+          <option>{props.location}</option>
+          <option>{props.name}</option>
+        </select>
+      </div>
     )
   }
 }

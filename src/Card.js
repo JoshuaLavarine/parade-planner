@@ -8,7 +8,9 @@ class Card extends Component {
 
   render() {
     return(
-      <h1>hi</h1>
+      <div>
+        <h1>{}</h1>
+      </div>
       
     )
   }
