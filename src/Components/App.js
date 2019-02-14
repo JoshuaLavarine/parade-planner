@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import paradeData from './paradeData';
-import restaurantData from './restaurantData';
+import '../App.css';
+import paradeData from '../paradeData';
+import restaurantData from '../restaurantData';
 import FilterControls from './FilterControls';
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       parades : paradeData.parades,
       restaurants : restaurantData.restaurants
+      
     }
   }
   
