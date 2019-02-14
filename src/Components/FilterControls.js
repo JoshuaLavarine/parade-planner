@@ -11,9 +11,6 @@ class FilterControls extends Component {
     }
   }
 
-  //Write methods to filter out data based state strings
-  //Methods will RETURN our derrived data and pass down to child component
-
   getClickedLocation = (event) => {
     let selectedLocation = event.target.value;
     this.setState({
@@ -22,7 +19,6 @@ class FilterControls extends Component {
   }
 
   
-  //this second argument is telling the getClickedLocation to set the state before it runs the method, so that we can grab what we thing were grabbing(all the objects)
   filterByLocation = () => {
     return this.props.parades.filter(parade => {
       return parade.location === this.state.location
@@ -42,19 +38,45 @@ class FilterControls extends Component {
     })
   }
 
- 
+  getClickedDate = (event) => {
+    let selectedDate = event.target.value;
+    this.setState({
+      date: selectedDate
+    }, this.filterByDate)
+  }
+
+  filterByDate = () => {
+    return this.props.parades.filter(parade => {
+      return parade.date === this.state.date
+    })
+  }
+
+
 
 
 
   render() {
     return (
       <div>
-        <CardContainer filteredParades={this.filterByLocation()}/>
-        <button value="Metairie" onClick={this.getClickedLocation}>METARIE</button>
+        <CardContainer 
+        filteredParadesLocation={this.filterByLocation()}
+        filteredParadesDate={this.filterByDate()}
+        filteredParadesTime={this.filterByTime()}
+        />
+        <select onChange={this.getClickedLocation}>
+          <option value="">--Select Location--</option>
+          <option value="Metairie">Metairie</option>
+          <option value="Uptown New Orleans">Uptown New Orleans</option>
+        </select>
         <select onChange={this.getClickedTime}>
           <option value="">--Select Time--</option>
           <option value="am">AM</option>
           <option value="pm">PM</option>
+        </select>
+        {/* We want to dynamically insert the dates rather than hard coding */}
+        <select onChange={this.getClickedDate}>
+          <option value="">--Select Date--</option>
+          <option value="2/22/2019">2/22/2019</option>
         </select>
       </div>
     )
