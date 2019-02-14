@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Filter from './Filter'
 import paradeData from './paradeData';
 
-class FilterContainer extends Component {
+class FilterControls extends Component {
   constructor() {
     super();
   }

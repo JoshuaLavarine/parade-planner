@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import CardContainer from './CardContainer';
-import FilterContainer from './FilterContainer';
 import paradeData from './paradeData';
 import restaurantData from './restaurantData';
+import FilterControls from './FilterControls';
 
 class App extends Component {
   constructor() {
@@ -17,8 +16,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <FilterContainer location={this.state.parades} />
-      <CardContainer />
+        <h1>PARADE PLANNER</h1>
+        <FilterControls 
+        parades={this.state.parades}
+        restaurants={this.state.restaurants}
+        />
       </div>
     );
   }
