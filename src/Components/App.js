@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import FilterControls from './FilterControls';
+import Header from './Header';
 
 class App extends Component {
   constructor() {
@@ -38,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>PARADE PLANNER</h1>
+        <Header />
         <FilterControls 
         parades={this.state.parades}
         restaurants={this.state.restaurants}
