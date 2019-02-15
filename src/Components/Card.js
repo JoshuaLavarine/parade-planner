@@ -8,7 +8,7 @@ class Card extends Component {
   render() {
     return(
       <div>
-        <h1>{}</h1>
+        <section>{this.props.filteredByLocation}</section>
       </div>
       
     )
