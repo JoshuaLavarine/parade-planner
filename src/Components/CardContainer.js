@@ -6,10 +6,25 @@ class CardContainer extends Component {
       super();
   }
 
+
+   displayLocationCards = () => {
+     console.log('fire')
+     if(this.props.filteredParadesLocation){
+     return this.props.filteredParadesLocation.map((card)=> { 
+        console.log(card)   
+      return <li>{card.name}</li>
+    })
+  } else {
+    return null
+  }
+}
+
     render() {
       return(
           <div>
-              <Card />
+           <ul>
+            {this.displayLocationCards()}
+           </ul>
           </div>
       )
   }     
