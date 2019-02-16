@@ -71,7 +71,7 @@ class FilterControls extends Component {
     // this.setState({
     //   location: this.props.parades.location 
     // })
-  }
+  // }
 
 
 
@@ -79,23 +79,25 @@ class FilterControls extends Component {
   render() {
     return (
       <div>
-        <select onChange={this.getClickedLocation}>
-          <option value="">--Select Location--</option>
-          <option value="Metairie">Metairie</option>
-          <option value="Uptown New Orleans">Uptown New Orleans</option>
-        </select>
-        <select onChange={this.getClickedTime}>
-          <option value="">--Select Time--</option>
-          <option value="am">AM</option>
-          <option value="pm">PM</option>
-        </select>
-        {/* We want to dynamically insert the dates rather than hard coding */}
-        <select onChange={this.getClickedDate}>
-          <option value="">--Select Date--</option>
-          <option value="2/22/2019">2/22/2019</option>
-        </select>
-        <button onClick={this.resetFilter}>Reset Filters</button>
-        <button onClick={this.showAllParades}>Show All</button>
+        <div className ="filters-section">
+          <select onChange={this.getClickedLocation}>
+            <option value="">--Select Location--</option>
+            <option value="Metairie">Metairie</option>
+            <option value="Uptown New Orleans">Uptown New Orleans</option>
+          </select>
+          <select onChange={this.getClickedTime}>
+            <option value="">--Select Time--</option>
+            <option value="am">AM</option>
+            <option value="pm">PM</option>
+          </select>
+          {/* We want to dynamically insert the dates rather than hard coding */}
+          <select onChange={this.getClickedDate}>
+            <option value="">--Select Date--</option>
+            <option value="2/22/2019">2/22/2019</option>
+          </select>
+          <button onClick={this.resetFilter}>Reset Filters</button>
+          <button onClick={this.showAllParades}>Show All</button>
+        </div>
         <CardContainer 
         filteredParadesLocation={this.filterByLocation()}
         filteredParadesDate={this.filterByDate()}

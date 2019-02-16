@@ -15,8 +15,10 @@ class CardContainer extends Component {
      return this.props.filteredParadesLocation.map(card => { 
         console.log(card)  
       return <article className="container">
-            <img src={card.img} />
-            <h3>{card.name}</h3>
+            <div>
+              <img className="card-photo" src={card.img} />
+              <h3>{card.name}</h3>
+            </div>
             </article>
     })
   } else {
@@ -27,7 +29,7 @@ class CardContainer extends Component {
     render() {
       return(
           <div>
-           <section>
+           <section className = "card-container">
             {this.displayLocationCards()}
            </section>
           </div>

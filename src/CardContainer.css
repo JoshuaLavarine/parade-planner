@@ -1,14 +1,20 @@
-.container {
-  border: .5px solid black;
-  display: flex;
-  flex-direction: flex-wrap;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 }
 
-.container img {
-  height: 100px;
-  width: 150px;
+.card-photo {
+  /* display: flex; */
+  flex-wrap: flex;
+  justify-content: space-between;
+  height: 250px;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px
 }
