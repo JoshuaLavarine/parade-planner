@@ -51,6 +51,27 @@ class FilterControls extends Component {
     })
   }
 
+  resetFilter = () => {
+    this.setState({
+      location: '',
+      time: '',
+      date: ''
+    })
+  }
+
+  // showAllParades = () => {
+  //   return this.props.parades.map(card => { 
+  //     console.log("Mardi Gras")  
+  //   return <article className="container">
+  //         <img src={card.img} />
+  //         <h3>{card.name}</h3>
+  //         </article>
+  // })
+  // display parades as a returned div
+    // this.setState({
+    //   location: this.props.parades.location 
+    // })
+  }
 
 
 
@@ -58,11 +79,6 @@ class FilterControls extends Component {
   render() {
     return (
       <div>
-        <CardContainer 
-        filteredParadesLocation={this.filterByLocation()}
-        filteredParadesDate={this.filterByDate()}
-        filteredParadesTime={this.filterByTime()}
-        />
         <select onChange={this.getClickedLocation}>
           <option value="">--Select Location--</option>
           <option value="Metairie">Metairie</option>
@@ -78,6 +94,13 @@ class FilterControls extends Component {
           <option value="">--Select Date--</option>
           <option value="2/22/2019">2/22/2019</option>
         </select>
+        <button onClick={this.resetFilter}>Reset Filters</button>
+        <button onClick={this.showAllParades}>Show All</button>
+        <CardContainer 
+        filteredParadesLocation={this.filterByLocation()}
+        filteredParadesDate={this.filterByDate()}
+        filteredParadesTime={this.filterByTime()}
+        />
       </div>
     )
   }
