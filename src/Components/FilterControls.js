@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CardContainer from './CardContainer';
+import '../FilterControls.css';
 
 class FilterControls extends Component {
   constructor(props) {
@@ -95,8 +96,10 @@ class FilterControls extends Component {
             <option value="">--Select Date--</option>
             <option value="2/22/2019">2/22/2019</option>
           </select>
-          <button onClick={this.resetFilter}>Reset Filters</button>
-          <button onClick={this.showAllParades}>Show All</button>
+          <div>
+            <button onClick={this.resetFilter}>Reset Filters</button>
+            <button onClick={this.showAllParades}>Show All</button>
+          </div>
         </div>
         <CardContainer 
         filteredParadesLocation={this.filterByLocation()}
