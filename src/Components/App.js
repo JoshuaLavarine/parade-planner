@@ -8,9 +8,10 @@ class App extends Component {
     super();
     this.state = {
       parades : [],
-      restaurants : []
+      restaurants : [],
     }
   }
+
 
   componentDidMount() {
     fetch('http://whateverly-datasets.herokuapp.com/api/v1/restaurants')
@@ -43,6 +44,7 @@ class App extends Component {
         <FilterControls 
         parades={this.state.parades}
         restaurants={this.state.restaurants}
+
         />
       </div>
     );

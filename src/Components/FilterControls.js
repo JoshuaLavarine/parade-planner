@@ -8,7 +8,7 @@ class FilterControls extends Component {
     this.state = {
       location: '',
       time: '',
-      date: ''
+      date: '',
     }
   }
 
@@ -75,6 +75,18 @@ class FilterControls extends Component {
   // }
 
 
+  grabDates = () => {
+    let datesArray = this.props.parades.reduce((acc, currentParade) => {
+      if(!acc.includes(currentParade.date)){
+        acc.push(currentParade.date)
+      }
+      return acc
+    },[])
+    return datesArray
+  }
+
+ 
+
 
 
   render() {
@@ -96,10 +108,15 @@ class FilterControls extends Component {
                   <option value="am">AM</option>
                   <option value="pm">PM</option>
                 </select>
-              {/* We want to dynamically insert the dates rather than hard coding */}
               <select className="filter" onChange={this.getClickedDate}>
                 <option value="">--Select Date--</option>
-                <option value="2/22/2019">2/22/2019</option>
+                {this.props.parades.reduce((acc, currentParade) => {
+                  if(!acc.includes(currentParade.date)){acc.push(currentParade.date)}
+                    return acc
+                  },[]).map((name)=> {
+                    return (<option value={[name]}>{[name]}</option>)
+                  })
+                }
               </select>
             </div>
         </div>
@@ -107,6 +124,7 @@ class FilterControls extends Component {
         filteredParadesLocation={this.filterByLocation()}
         filteredParadesDate={this.filterByDate()}
         filteredParadesTime={this.filterByTime()}
+        dates={this.grabDates()}
         />
       </div>
     )
@@ -114,3 +132,4 @@ class FilterControls extends Component {
 }
 
 export default FilterControls;
+

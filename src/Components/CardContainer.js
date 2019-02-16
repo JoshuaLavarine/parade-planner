@@ -8,6 +8,9 @@ class CardContainer extends Component {
       super();
   }
 
+  displayFilteredCards = () => {
+    //display all the filtered cards
+  }
 
    displayLocationCards = () => {
      console.log('fire')
