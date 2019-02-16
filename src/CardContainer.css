@@ -1,0 +1,14 @@
+.container {
+  border: .5px solid black;
+  display: flex;
+  flex-direction: flex-wrap;
+}
+
+.container img {
+  height: 100px;
+  width: 150px;
+}
+
+h3 {
+  font-size: 12px;
+}
