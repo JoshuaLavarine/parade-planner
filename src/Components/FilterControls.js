@@ -74,21 +74,6 @@ class FilterControls extends Component {
     // })
   // }
 
-
-  grabDates = () => {
-    let datesArray = this.props.parades.reduce((acc, currentParade) => {
-      if(!acc.includes(currentParade.date)){
-        acc.push(currentParade.date)
-      }
-      return acc
-    },[])
-    return datesArray
-  }
-
- 
-
-
-
   render() {
     return (
       <div>
@@ -124,7 +109,6 @@ class FilterControls extends Component {
         filteredParadesLocation={this.filterByLocation()}
         filteredParadesDate={this.filterByDate()}
         filteredParadesTime={this.filterByTime()}
-        dates={this.grabDates()}
         />
       </div>
     )
