@@ -81,25 +81,27 @@ class FilterControls extends Component {
     return (
       <div>
         <div className ="filters-section">
-          <select onChange={this.getClickedLocation}>
-            <option value="">--Select Location--</option>
-            <option value="Metairie">Metairie</option>
-            <option value="Uptown New Orleans">Uptown New Orleans</option>
-          </select>
-          <select onChange={this.getClickedTime}>
-            <option value="">--Select Time--</option>
-            <option value="am">AM</option>
-            <option value="pm">PM</option>
-          </select>
-          {/* We want to dynamically insert the dates rather than hard coding */}
-          <select onChange={this.getClickedDate}>
-            <option value="">--Select Date--</option>
-            <option value="2/22/2019">2/22/2019</option>
-          </select>
-          <div>
-            <button onClick={this.resetFilter}>Reset Filters</button>
-            <button onClick={this.showAllParades}>Show All</button>
-          </div>
+          <div className="buttons">
+              <button className="filter-button"onClick={this.showAllParades}>Show All</button>
+              <button className="filter-button"onClick={this.resetFilter}>Reset Filters</button>
+            </div>
+              <div className="filters">
+                <select className="filter" onChange={this.getClickedLocation}>
+                  <option value="">--Select Location--</option>
+                  <option value="Metairie">Metairie</option>
+                  <option value="Uptown New Orleans">Uptown New Orleans</option>
+                </select>
+                <select className="filter" onChange={this.getClickedTime}>
+                  <option value="">--Select Time--</option>
+                  <option value="am">AM</option>
+                  <option value="pm">PM</option>
+                </select>
+              {/* We want to dynamically insert the dates rather than hard coding */}
+              <select className="filter" onChange={this.getClickedDate}>
+                <option value="">--Select Date--</option>
+                <option value="2/22/2019">2/22/2019</option>
+              </select>
+            </div>
         </div>
         <CardContainer 
         filteredParadesLocation={this.filterByLocation()}

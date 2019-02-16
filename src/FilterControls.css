@@ -1,4 +1,33 @@
 .filters-section {
-  height: 100px;
-  background-color: red;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.filter {
+  height: 40px;
+  width: 140px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.filters{
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.filter-button{
+  height: 40px;
+  width: 90px;
+  font-weight: 800;
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
