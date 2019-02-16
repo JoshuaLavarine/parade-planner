@@ -50,6 +50,28 @@ class FilterControls extends Component {
       return parade.date === this.state.date
     })
   }
+ 
+  advanceFilter = (event) => {
+    event.preventDefault()
+    const {location,time,date} = this.state
+    let info = {location,time,date}
+    this.props.parades.reduce((acc,curr) => {
+      
+      let object = {location: curr.location,
+                    time: curr.dayOrNight, 
+                    date: curr.date}
+                    console.log(object, info, "heyy")
+      if(object == info){
+        console.log('heyy')
+        acc.push(curr);
+
+        
+      }
+      
+      
+      return acc;
+    },[])
+  }
   
  
   
@@ -68,22 +90,37 @@ class FilterControls extends Component {
         filteredParadesDate={this.filterByDate()}
         filteredParadesTime={this.filterByTime()}
         />
-        <select onChange={this.getClickedLocation}>
+        <form onSubmit = {this.advanceFilter}>
+        <select onChange= {event => {
+          this.setState({
+            location: event.target.value
+            
+          })
+        }} >
           <option value="">--Select Location--</option>
           <option value="Metairie">Metairie</option>
-          <option value="Uptown New Orleans">Uptown New Orleans</option>
+          <option value="Uptown New Orleans">Uptown New Onprleans</option>
         </select>
-        <select onChange={this.getClickedTime}>
+        <select onChange={event => {
+          this.setState({
+            time: event.target.value
+          })
+        }}>
           <option value="">--Select Time--</option>
           <option value="am">AM</option>
           <option value="pm">PM</option>
         </select>
         {/* We want to dynamically insert the dates rather than hard coding */}
-        <select onChange={this.getClickedDate}>
+        <select onChange={event => {
+          this.setState({
+            date: event.target.value
+          })
+        }}>
           <option value="">--Select Date--</option>
           <option value="2/22/2019">2/22/2019</option>
         </select>
         <button> click me</button>
+        </form>
       </div>
     )
   }
