@@ -9,6 +9,7 @@
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .filters{
@@ -24,10 +25,13 @@
 }
 
 .filter-button{
-  height: 40px;
-  width: 90px;
+  height: 45px;
+  width: 95px;
+  font-size: 12px;
   font-weight: 800;
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
+  background-color: purple;
+  color:white;
 }

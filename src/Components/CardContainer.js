@@ -25,12 +25,47 @@ class CardContainer extends Component {
     return null
   }
 }
+displayTimeCards = () => {
+  console.log('fire')
+  if (this.props.filteredParadesTime) {
+  return this.props.filteredParadesTime.map(card => { 
+     console.log(card)  
+   return <article className="container">
+         <div>
+           <img className="card-photo" src={card.img} />
+           <h3>{card.name}</h3>
+         </div>
+         </article>
+ })
+} else {
+ return null
+}
+}
+
+displayDateCards = () => {
+  console.log('fire')
+  if (this.props.filteredParadesDate) {
+  return this.props.filteredParadesDate.map(card => { 
+     console.log(card)  
+   return <article className="container">
+         <div>
+           <img className="card-photo" src={card.img} />
+           <h3>{card.name}</h3>
+         </div>
+         </article>
+ })
+} else {
+ return null
+}
+}
 
     render() {
       return(
           <div>
            <section className = "card-container">
             {this.displayLocationCards()}
+            {this.displayTimeCards()}
+            {this.displayDateCards()}
            </section>
           </div>
       )

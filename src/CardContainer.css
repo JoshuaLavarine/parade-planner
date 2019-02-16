@@ -11,6 +11,11 @@
   width: 300px;
   margin-left: 10px;
   margin-right: 10px;
+  opacity: .75;
+}
+
+.card-photo:hover {
+  opacity: 1;
 }
 
 h3 {
