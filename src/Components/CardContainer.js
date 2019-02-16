@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Card from './Card'
+import Card from './Card';
+import '../CardContainer.css';
+
 
 class CardContainer extends Component {
   constructor(){
@@ -9,10 +11,13 @@ class CardContainer extends Component {
 
    displayLocationCards = () => {
      console.log('fire')
-     if(this.props.filteredParadesLocation){
-     return this.props.filteredParadesLocation.map((card)=> { 
-        console.log(card)   
-      return <li>{card.name}</li>
+     if (this.props.filteredParadesLocation) {
+     return this.props.filteredParadesLocation.map(card => { 
+        console.log(card)  
+      return <article className="container">
+            <img src={card.img} />
+            <h3>{card.name}</h3>
+            </article>
     })
   } else {
     return null
@@ -22,9 +27,9 @@ class CardContainer extends Component {
     render() {
       return(
           <div>
-           <ul>
+           <section>
             {this.displayLocationCards()}
-           </ul>
+           </section>
           </div>
       )
   }     

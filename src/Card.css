@@ -1,0 +1,5 @@
+/* we have to add the card in the return in the Card Container in order to target it with CSS in this file. otherwise, we will have to style the cards within CardSection.css */
+
+.Card {
+  color: pink;
+}
