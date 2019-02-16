@@ -50,6 +50,11 @@ class FilterControls extends Component {
       return parade.date === this.state.date
     })
   }
+  
+ 
+  
+
+  
 
 
 
@@ -78,6 +83,7 @@ class FilterControls extends Component {
           <option value="">--Select Date--</option>
           <option value="2/22/2019">2/22/2019</option>
         </select>
+        <button> click me</button>
       </div>
     )
   }
