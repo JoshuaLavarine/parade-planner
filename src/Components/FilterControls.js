@@ -15,6 +15,18 @@ class FilterControls extends Component {
   getClickedValue = (event) => {
     this.setState({
       [event.target.id]: event.target.value
+    }, this.filterParades)
+  }
+
+  filterParades = () => { 
+    const { location, time, date } = this.state;
+    const { parades } = this.props;
+     return parades.filter(parade=> {
+      return parade.date === date 
+    }).parades.filter(parade=> {
+      return parade.location === location 
+    }).parades.filter(parade=> {
+      return parade.dayOrNight === time 
     })
   }
   
@@ -29,6 +41,7 @@ class FilterControls extends Component {
       return parade.dayOrNight === this.state.time
     })
   }
+
 
   filterByDate = () => {
     return this.props.parades.filter(parade => {
@@ -76,9 +89,7 @@ class FilterControls extends Component {
             </div>
         </div>
         <CardContainer 
-        filteredParadesLocation={this.filterByLocation()}
-        filteredParadesDate={this.filterByDate()}
-        filteredParadesTime={this.filterByTime()}
+        filteredParades={this.filterParades()}
         />
       </div>
     )

@@ -8,15 +8,9 @@ class CardContainer extends Component {
       super();
   }
 
-  displayFilteredCards = () => {
-    //display all the filtered cards
-  }
-
-   displayLocationCards = () => {
-     console.log('fire')
-     if (this.props.filteredParadesLocation) {
-     return this.props.filteredParadesLocation.map(card => { 
-        console.log(card)  
+   displayCards = () => {
+     if (this.props.filteredParades) {
+     return this.props.filteredParades.map(card => { 
       return <article className="container">
             <div className="individual-card">
               <img className="card-photo" src={card.img} />
@@ -28,52 +22,13 @@ class CardContainer extends Component {
     return null
   }
 }
-displayTimeCards = () => {
-  console.log('fire')
-  if (this.props.filteredParadesTime) {
-  return this.props.filteredParadesTime.map(card => { 
-     console.log(card)  
-   return <article className="container">
-         <div className="individual-card">
-           <img className="card-photo" src={card.img}/>
-           <h3>{card.name}</h3>
-         </div>
-         </article>
- })
-} else {
- return null
-}
-}
-
-
-displayDateCards = () => {
-  console.log('fire')
-  if (this.props.filteredParadesDate) {
-  return this.props.filteredParadesDate.map(card => { 
-     console.log(card)  
-   return <article className="container">
-         <div className="individual-card">
-           <img className="card-photo" src={card.img}/>
-           <h3>{card.name}</h3>
-         </div>
-         </article>
- })
-} else {
- return null
-}
-}
-
-  displayAllFilterd = () => {
-
-  }
 
     render() {
+      console.log(this.props.filteredParades)
       return(
           <div>
            <section className = "card-container">
-            {this.displayLocationCards()}
-            {this.displayTimeCards()}
-            {this.displayDateCards()}
+            {this.displayCards()}
            </section>
           </div>
       )
