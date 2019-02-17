@@ -9,6 +9,7 @@ class FilterControls extends Component {
       location: '',
       time: '',
       date: '',
+      matchedIds: []
     }
   }
 
@@ -21,32 +22,32 @@ class FilterControls extends Component {
   filterParades = () => { 
     const { location, time, date } = this.state;
     const { parades } = this.props;
-     return parades.filter(parade=> {
-      return parade.date === date 
-    }).parades.filter(parade=> {
-      return parade.location === location 
-    }).parades.filter(parade=> {
-      return parade.dayOrNight === time 
-    })
-  }
-  
-  filterByLocation = () => {
-    return this.props.parades.filter(parade => {
-      return parade.location === this.state.location
-    })
-  }
-  
-  filterByTime = () => {
-    return this.props.parades.filter(parade => {
-      return parade.dayOrNight === this.state.time
-    })
+    let matchedIds = [];
+    let matchedObjects = this.returnMatchingObjects();
+
+    parades.forEach(parade => {
+      if (!matchedObjects.includes(parade) && 
+      parade.location === location || 
+      parade.dayOrNight === time ||
+      parade.date === date)
+      {
+        matchedObjects.push(parade);
+        matchedIds.push(parade.id);
+        this.setState({ matchedIds });
+      }
+    });
   }
 
-
-  filterByDate = () => {
-    return this.props.parades.filter(parade => {
-      return parade.date === this.state.date
+  returnMatchingObjects = () => {
+    return this.props.parades.reduce((acc, parade) => {
+      this.state.matchedIds.forEach(id => {
+        if (parade.id === id) {
+          acc.push(parade)
+          console.log(parade)
+        }
     })
+      return acc
+    }, [])
   }
 
   resetFilter = () => {
