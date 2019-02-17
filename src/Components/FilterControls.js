@@ -12,13 +12,11 @@ class FilterControls extends Component {
     }
   }
 
-  getClickedLocation = (event) => {
-    let selectedLocation = event.target.value;
+  getClickedValue = (event) => {
     this.setState({
-      location: selectedLocation
-    }, this.filterByLocation)
+      [event.target.id]: event.target.value
+    })
   }
-
   
   filterByLocation = () => {
     return this.props.parades.filter(parade => {
@@ -26,24 +24,10 @@ class FilterControls extends Component {
     })
   }
   
-  getClickedTime = (event) => {
-    let selectedTime = event.target.value;
-    this.setState({
-      time: selectedTime
-    }, this.filterByTime)
-  }
-  
   filterByTime = () => {
     return this.props.parades.filter(parade => {
       return parade.dayOrNight === this.state.time
     })
-  }
-
-  getClickedDate = (event) => {
-    let selectedDate = event.target.value;
-    this.setState({
-      date: selectedDate
-    }, this.filterByDate)
   }
 
   filterByDate = () => {
@@ -60,20 +44,6 @@ class FilterControls extends Component {
     })
   }
 
-  // showAllParades = () => {
-  //   return this.props.parades.map(card => { 
-  //     console.log("Mardi Gras")  
-  //   return <article className="container">
-  //         <img src={card.img} />
-  //         <h3>{card.name}</h3>
-  //         </article>
-  // })
-  // display parades as a returned div
-    // this.setState({
-    //   location: this.props.parades.location 
-    // })
-  // }
-
   render() {
     return (
       <div>
@@ -83,17 +53,17 @@ class FilterControls extends Component {
               <button className="filter-button"onClick={this.resetFilter}>Reset Filters</button>
             </div>
               <div className="filters">
-                <select className="filter" onChange={this.getClickedLocation}>
+                <select className="filter" id="location" onChange={this.getClickedValue}>
                   <option value="">--Select Location--</option>
                   <option value="Metairie">Metairie</option>
                   <option value="Uptown New Orleans">Uptown New Orleans</option>
                 </select>
-                <select className="filter" onChange={this.getClickedTime}>
+                <select className="filter" id="time" onChange={this.getClickedValue}>
                   <option value="">--Select Time--</option>
                   <option value="am">AM</option>
                   <option value="pm">PM</option>
                 </select>
-              <select className="filter" onChange={this.getClickedDate}>
+              <select className="filter" id="date" onChange={this.getClickedValue}>
                 <option value="">--Select Date--</option>
                 {this.props.parades.reduce((acc, currentParade) => {
                   if(!acc.includes(currentParade.date)){acc.push(currentParade.date)}
