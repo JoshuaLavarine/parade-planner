@@ -69,6 +69,9 @@ class FilterControls extends Component {
         </div>
         <CardContainer 
         filteredParades={this.filterParades()}
+        parades={this.props.parades}
+        restaurants={this.props.restaurants}
+
         />
       </div>
     )
