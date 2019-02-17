@@ -7,9 +7,8 @@ class FilterControls extends Component {
     super(props);
     this.state = {
       location: '',
-      time: '',
-      date: '',
-      matchedIds: []
+      dayOrNight: '',
+      date: ''
     }
   }
 
@@ -20,40 +19,19 @@ class FilterControls extends Component {
   }
 
   filterParades = () => { 
-    const { location, time, date } = this.state;
-    const { parades } = this.props;
-    let matchedIds = [];
-    let matchedObjects = this.returnMatchingObjects();
-
-    parades.forEach(parade => {
-      if (!matchedObjects.includes(parade) && 
-      parade.location === location || 
-      parade.dayOrNight === time ||
-      parade.date === date)
-      {
-        matchedObjects.push(parade);
-        matchedIds.push(parade.id);
-        this.setState({ matchedIds });
-      }
-    });
-  }
-
-  returnMatchingObjects = () => {
-    return this.props.parades.reduce((acc, parade) => {
-      this.state.matchedIds.forEach(id => {
-        if (parade.id === id) {
-          acc.push(parade)
-          console.log(parade)
-        }
+    let keyArr = ['location', 'dayOrNight', 'date']
+    let filteredParades = this.props.parades.filter(parade => {
+      return keyArr.every(key => {
+        return this.state[key] === parade[key] || this.state[key] === ''
+      })
     })
-      return acc
-    }, [])
+    return filteredParades
   }
 
   resetFilter = () => {
     this.setState({
       location: '',
-      time: '',
+      dayOrNight: '',
       date: ''
     })
   }
@@ -72,7 +50,7 @@ class FilterControls extends Component {
                   <option value="Metairie">Metairie</option>
                   <option value="Uptown New Orleans">Uptown New Orleans</option>
                 </select>
-                <select className="filter" id="time" onChange={this.getClickedValue}>
+                <select className="filter" id="dayOrNight" onChange={this.getClickedValue}>
                   <option value="">--Select Time--</option>
                   <option value="am">AM</option>
                   <option value="pm">PM</option>
