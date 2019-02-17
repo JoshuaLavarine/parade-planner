@@ -39,31 +39,21 @@ class CardContainer extends Component {
       
       switch(this.state.isExpanded){
         case(true):
-        return <Card parades={this.props.parades}
-        restaurants={this.props.restaurants}
-        id={this.state.id}
-        toggle={this.toggleCard}/>
+        return <Card 
+          parades={this.props.parades}
+          restaurants={this.props.restaurants}
+          id={this.state.id}
+          toggle={this.toggleCard}
+          />
         default:
-        return(
-
-          <div>
-           <section className = "card-container">
-            {this.displayCards()}
-           </section>
-          </div>
+          return(
+            <div>
+            <section className = "card-container">
+              {this.displayCards()}
+            </section>
+            </div>
       )
-
-      }
-
-      // console.log(this.props.filteredParades)
-      // return(
-
-      //     <div>
-      //      <section className = "card-container">
-      //       {this.displayCards()}
-      //      </section>
-      //     </div>
-      // )
+    }
   }     
 }
 
