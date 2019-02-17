@@ -18,7 +18,7 @@ class CardContainer extends Component {
      return this.props.filteredParadesLocation.map(card => { 
         console.log(card)  
       return <article className="container">
-            <div>
+            <div className="individual-card">
               <img className="card-photo" src={card.img} />
               <h3>{card.name}</h3>
             </div>
@@ -34,8 +34,8 @@ displayTimeCards = () => {
   return this.props.filteredParadesTime.map(card => { 
      console.log(card)  
    return <article className="container">
-         <div>
-           <img className="card-photo" src={card.img} />
+         <div className="individual-card">
+           <img className="card-photo" src={card.img}/>
            <h3>{card.name}</h3>
          </div>
          </article>
@@ -45,14 +45,15 @@ displayTimeCards = () => {
 }
 }
 
+
 displayDateCards = () => {
   console.log('fire')
   if (this.props.filteredParadesDate) {
   return this.props.filteredParadesDate.map(card => { 
      console.log(card)  
    return <article className="container">
-         <div>
-           <img className="card-photo" src={card.img} />
+         <div className="individual-card">
+           <img className="card-photo" src={card.img}/>
            <h3>{card.name}</h3>
          </div>
          </article>
@@ -61,6 +62,10 @@ displayDateCards = () => {
  return null
 }
 }
+
+  displayAllFilterd = () => {
+
+  }
 
     render() {
       return(

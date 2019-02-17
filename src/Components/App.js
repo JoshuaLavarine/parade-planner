@@ -39,12 +39,11 @@ class App extends Component {
   
   render() {
     return (
-      <div >
+      <div className="entire-page">
         <Header />
         <FilterControls 
         parades={this.state.parades}
         restaurants={this.state.restaurants}
-
         />
       </div>
     );

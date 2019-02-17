@@ -5,7 +5,7 @@
 
 .filter {
   height: 40px;
-  width: 140px;
+  width: 200px;
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 600;
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 8px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .filter-button{
