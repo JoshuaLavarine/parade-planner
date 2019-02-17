@@ -7,22 +7,26 @@ class CardContainer extends Component {
   constructor(){
       super();
       this.state = {
-          isExpanded: false
+          isExpanded: false,
+          id: -1
+          
       }
   }
-  toggleCard = () => {
+  toggleCard = (event) => {
+    console.log(event.target)
     this.setState({
-      isExpanded: !this.state.isExpanded
+      isExpanded: !this.state.isExpanded,
+      id: event.target.name
     })
   }
 
    displayCards = () => {
      if (this.props.filteredParades) {
      return this.props.filteredParades.map(card => { 
-      return <article className="container">
-            <div className="individual-card" onClick={this.toggleCard} >
-              <img className="card-photo" src={card.img} />
-              <h3>{card.name}</h3>
+      return <article className="container" name={card.id} >
+            <div className="individual-card" onClick={this.toggleCard} name={card.id}>
+              <img className="card-photo" src={card.img} name={card.id}/>
+              <h3 name={card.id}> {card.name} </h3>
             </div>
             </article>
     })
@@ -32,14 +36,34 @@ class CardContainer extends Component {
 }
 
     render() {
-      console.log(this.props.filteredParades)
-      return(
+      
+      switch(this.state.isExpanded){
+        case(true):
+        return <Card parades={this.props.parades}
+        restaurants={this.props.restaurants}
+        id={this.state.id}
+        toggle={this.toggleCard}/>
+        default:
+        return(
+
           <div>
            <section className = "card-container">
             {this.displayCards()}
            </section>
           </div>
       )
+
+      }
+
+      // console.log(this.props.filteredParades)
+      // return(
+
+      //     <div>
+      //      <section className = "card-container">
+      //       {this.displayCards()}
+      //      </section>
+      //     </div>
+      // )
   }     
 }
 
