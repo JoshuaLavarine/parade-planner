@@ -8,15 +8,14 @@ class CardContainer extends Component {
       super();
   }
 
-
-   displayLocationCards = () => {
-     console.log('fire')
-     if (this.props.filteredParadesLocation) {
-     return this.props.filteredParadesLocation.map(card => { 
-        console.log(card)  
+   displayCards = () => {
+     if (this.props.filteredParades) {
+     return this.props.filteredParades.map(card => { 
       return <article className="container">
-            <img src={card.img} />
-            <h3>{card.name}</h3>
+            <div className="individual-card">
+              <img className="card-photo" src={card.img} />
+              <h3>{card.name}</h3>
+            </div>
             </article>
     })
   } else {
@@ -25,10 +24,11 @@ class CardContainer extends Component {
 }
 
     render() {
+      console.log(this.props.filteredParades)
       return(
           <div>
-           <section>
-            {this.displayLocationCards()}
+           <section className = "card-container">
+            {this.displayCards()}
            </section>
           </div>
       )

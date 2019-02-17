@@ -1,14 +1,37 @@
-.container {
-  border: .5px solid black;
-  display: flex;
-  flex-direction: flex-wrap;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 }
 
-.container img {
-  height: 100px;
-  width: 150px;
+.card-photo {
+  position: relative;
+  flex-wrap: flex;
+  justify-content: space-between;
+  height: 250px;
+  width: 300px;
+  margin-left: 8px;
+  margin-right: 8px;
+  opacity: .80;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.card-photo:hover {
+  opacity: 1;
 }
 
 h3 {
-  font-size: 12px;
+  font-family: cursive;
+  position: absolute;
+  font-size: 27px;
+  font-weight: 800;
+  color:white;
+  text-align: center;
+  margin-top: 130px;
+  margin-left: 65px;
+}
+
+.individual-card {
+  display: grid;
+  width: 300px;
 }

@@ -1,86 +1,79 @@
 import React, { Component } from 'react';
 import CardContainer from './CardContainer';
+import '../FilterControls.css';
 
 class FilterControls extends Component {
   constructor(props) {
     super(props);
     this.state = {
       location: '',
-      time: '',
+      dayOrNight: '',
       date: ''
     }
   }
 
-  getClickedLocation = (event) => {
-    let selectedLocation = event.target.value;
+  getClickedValue = (event) => {
     this.setState({
-      location: selectedLocation
-    }, this.filterByLocation)
+      [event.target.id]: event.target.value
+    }, this.filterParades)
   }
 
-  
-  filterByLocation = () => {
-    return this.props.parades.filter(parade => {
-      return parade.location === this.state.location
+  filterParades = () => { 
+    let keyArr = ['location', 'dayOrNight', 'date']
+    let filteredParades = this.props.parades.filter(parade => {
+      return keyArr.every(key => {
+        return this.state[key] === parade[key] || this.state[key] === ''
+      })
+    })
+    return filteredParades
+  }
+
+  resetFilter = () => {
+    this.setState({
+      location: '',
+      dayOrNight: '',
+      date: ''
     })
   }
-  
-  getClickedTime = (event) => {
-    let selectedTime = event.target.value;
-    this.setState({
-      time: selectedTime
-    }, this.filterByTime)
-  }
-  
-  filterByTime = () => {
-    return this.props.parades.filter(parade => {
-      return parade.dayOrNight === this.state.time
-    })
-  }
-
-  getClickedDate = (event) => {
-    let selectedDate = event.target.value;
-    this.setState({
-      date: selectedDate
-    }, this.filterByDate)
-  }
-
-  filterByDate = () => {
-    return this.props.parades.filter(parade => {
-      return parade.date === this.state.date
-    })
-  }
-
-
-
-
 
   render() {
     return (
       <div>
+        <div className ="filters-section">
+          <div className="buttons">
+              <button className="filter-button"onClick={this.showAllParades}>Show All</button>
+              <button className="filter-button"onClick={this.resetFilter}>Reset Filters</button>
+            </div>
+              <div className="filters">
+                <select className="filter" id="location" onChange={this.getClickedValue}>
+                  <option value="">--Select Location--</option>
+                  <option value="Metairie">Metairie</option>
+                  <option value="Uptown New Orleans">Uptown New Orleans</option>
+                </select>
+                <select className="filter" id="dayOrNight" onChange={this.getClickedValue}>
+                  <option value="">--Select Time--</option>
+                  <option value="am">AM</option>
+                  <option value="pm">PM</option>
+                </select>
+              <select className="filter" id="date" onChange={this.getClickedValue}>
+                <option value="">--Select Date--</option>
+                {this.props.parades.reduce((acc, currentParade) => {
+                  if(!acc.includes(currentParade.date)){acc.push(currentParade.date)}
+                    return acc
+                  },[]).map((name)=> {
+                    return (<option value={[name]}>{[name]}</option>)
+                  })
+                }
+              </select>
+            </div>
+        </div>
         <CardContainer 
-        filteredParadesLocation={this.filterByLocation()}
-        filteredParadesDate={this.filterByDate()}
-        filteredParadesTime={this.filterByTime()}
+        filteredParades={this.filterParades()}
         />
-        <select onChange={this.getClickedLocation}>
-          <option value="">--Select Location--</option>
-          <option value="Metairie">Metairie</option>
-          <option value="Uptown New Orleans">Uptown New Orleans</option>
-        </select>
-        <select onChange={this.getClickedTime}>
-          <option value="">--Select Time--</option>
-          <option value="am">AM</option>
-          <option value="pm">PM</option>
-        </select>
-        {/* We want to dynamically insert the dates rather than hard coding */}
-        <select onChange={this.getClickedDate}>
-          <option value="">--Select Date--</option>
-          <option value="2/22/2019">2/22/2019</option>
-        </select>
       </div>
     )
   }
 }
 
 export default FilterControls;
+

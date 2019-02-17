@@ -1,6 +1,7 @@
 .Header {
   background-image: url('https://www.visitlawrencecounty.com/wp-content/uploads/2018/02/Mardi-Gras-Volant-Shops.jpg');
   opacity: 3.5;
+  height: 180px;
 }
 
 h1, h2 {
@@ -10,6 +11,7 @@ h1, h2 {
   margin: 10px;
   text-align: center;
   text-shadow: 0.1em 0.1em 0.15em #720b98;
+  padding-top: 30px;
 }
 
 h1{
