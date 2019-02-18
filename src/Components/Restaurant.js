@@ -22,8 +22,7 @@ class Restaurant extends Component {
             <p>{restaurant.walk_to_parade}</p>
           </div> 
         )
-      })
-     
+      })     
     )
   }
 }
