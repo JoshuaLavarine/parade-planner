@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Restaurant.css';
 
 class Restaurant extends Component {
   constructor() {
@@ -9,9 +10,12 @@ class Restaurant extends Component {
 
   render() {
     return(
+      
       this.props.sortedRestaurants.map(restaurant => {
         return (
-          <div>
+          
+
+          <div className="individual-restaurant">
             <img src={restaurant.img} />
             <a href={restaurant.website} target="_blank">{restaurant.name.toUpperCase()}</a>
             <p>#{restaurant.cuisine.join(' #')}</p>
@@ -19,8 +23,10 @@ class Restaurant extends Component {
             <p>{restaurant.distance_to_parade}</p>
             <p>{restaurant.walk_to_parade}</p>
           </div>
+          
         )
       })
+     
     )
   }
 }

@@ -1,5 +1,24 @@
 /* we have to add the card in the return in the Card Container in order to target it with CSS in this file. otherwise, we will have to style the cards within CardSection.css */
 
 .Card {
-  color: pink;
+  color: red;
+
+}
+.pop-up{
+  width: 600px;
+  height: 600px;
+}
+
+.pop-up img {
+  width: 300px;
+  height: 300px;
+}
+
+.restaurant-container{
+  display: flex;
+  width: 800px;
+  
+  
+  
+
 }

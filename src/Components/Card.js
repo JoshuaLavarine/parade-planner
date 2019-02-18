@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Restaurant from './Restaurant.js';
+import Restaurant from './Restaurant';
+import "../Card.css";
 
 
 class Card extends Component {
@@ -17,14 +18,16 @@ class Card extends Component {
     })
         
     return(
-      <div >
+      <div className = "pop-up">
         <button onClick={this.props.toggle}>X</button>
         <h1>{displayCard[0].name}</h1>
         <img src={displayCard[0].img}/>
         <p>location: {displayCard[0].location}</p>
         <p>{displayCard[0].date} | {displayCard[0].startTime}</p>
         <p>Number of Floats: {displayCard[0].numberOfFloats}</p>
+        <div className="restaurant-container">
         <Restaurant sortedRestaurants={sortRestaurants}/>
+        </div>
       </div>
     )
   }
