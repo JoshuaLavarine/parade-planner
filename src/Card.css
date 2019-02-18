@@ -2,11 +2,6 @@
 
 .Card {
   color: red;
-
-}
-.pop-up{
-  width: 600px;
-  height: 600px;
 }
 
 .pop-up img {
@@ -16,9 +11,6 @@
 
 .restaurant-container{
   display: flex;
-  width: 800px;
-  
-  
-  
-
+  width: 100%;
+  overflow-x: auto;
 }

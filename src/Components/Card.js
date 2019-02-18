@@ -25,9 +25,11 @@ class Card extends Component {
         <p>location: {displayCard[0].location}</p>
         <p>{displayCard[0].date} | {displayCard[0].startTime}</p>
         <p>Number of Floats: {displayCard[0].numberOfFloats}</p>
-        <div className="restaurant-container">
-        <Restaurant sortedRestaurants={sortRestaurants}/>
-        </div>
+        {/* <div className="> */}
+          <div className="restaurant-container">
+              <Restaurant sortedRestaurants={sortRestaurants}/>
+          </div>
+        {/* </div> */}
       </div>
     )
   }
