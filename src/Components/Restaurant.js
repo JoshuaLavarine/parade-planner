@@ -13,8 +13,6 @@ class Restaurant extends Component {
       
       this.props.sortedRestaurants.map(restaurant => {
         return (
-          
-
           <div className="individual-restaurant">
             <img src={restaurant.img} />
             <a href={restaurant.website} target="_blank">{restaurant.name.toUpperCase()}</a>
@@ -22,8 +20,7 @@ class Restaurant extends Component {
             <p>{restaurant.rating}</p>
             <p>{restaurant.distance_to_parade}</p>
             <p>{restaurant.walk_to_parade}</p>
-          </div>
-          
+          </div> 
         )
       })
      

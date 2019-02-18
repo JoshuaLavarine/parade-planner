@@ -13,8 +13,8 @@ class Card extends Component {
     const displayCard = this.props.parades.filter((parade) => {
       return parade.id == this.props.id
     })
-    const sortRestaurants = this.props.restaurants.filter((res) => {
-      return res.location == displayCard[0].location
+    const sortRestaurants = this.props.restaurants.filter((restaurant) => {
+      return restaurant.location == displayCard[0].location
     })
         
     return(
@@ -25,11 +25,9 @@ class Card extends Component {
         <p>location: {displayCard[0].location}</p>
         <p>{displayCard[0].date} | {displayCard[0].startTime}</p>
         <p>Number of Floats: {displayCard[0].numberOfFloats}</p>
-        {/* <div className="> */}
           <div className="restaurant-container">
               <Restaurant sortedRestaurants={sortRestaurants}/>
           </div>
-        {/* </div> */}
       </div>
     )
   }

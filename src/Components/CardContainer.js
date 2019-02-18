@@ -7,27 +7,28 @@ class CardContainer extends Component {
   constructor(){
       super();
       this.state = {
-          isExpanded: false,
-          id: -1
+        id: -1,
+        isExpanded: false
           
       }
   }
-  
+
+
   toggleCard = (event) => {
-    console.log(event.target)
     this.setState({
       isExpanded: !this.state.isExpanded,
       id: event.target.name
-    }, this.displayCards)
+    })
+    console.log(event.target)
   }
 
    displayCards = () => {
      if (this.props.filteredParades) {
      return this.props.filteredParades.map(card => { 
       return <article className="container" name={card.id} >
-            <div className="individual-card" onClick={this.toggleCard} name={card.id}>
-              <img className="card-photo" src={card.img} name={card.id}/>
-              <h3 name={card.id}> {card.name} </h3>
+            <div className="individual-card" name={card.id}>
+              <img onClick={this.toggleCard} className="card-photo" src={card.img} name={card.id}/>
+              <h3 className="card-title" name={card.id}> {card.name} </h3>
             </div>
             </article>
     })
