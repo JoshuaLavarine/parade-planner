@@ -2,6 +2,8 @@
 .individual-restaurant{
     width: 500px;
     height: 500px;
-    background-color: pink;
-    border: 2px solid magenta;
+    background-color: rgba(225, 230, 216, 0.893);
+    border: 2px solid black;
+    margin-right: 7px;
+    padding: 5px
 }
