@@ -10,7 +10,16 @@ class Restaurant extends Component {
   render() {
     return(
       this.props.sortedRestaurants.map(restaurant => {
-        return (<p>{restaurant.name}</p>)
+        return (
+          <div>
+            <img src={restaurant.img} />
+            <a href={restaurant.website} target="_blank">{restaurant.name.toUpperCase()}</a>
+            <p>#{restaurant.cuisine.join(' #')}</p>
+            <p>{restaurant.rating}</p>
+            <p>{restaurant.distance_to_parade}</p>
+            <p>{restaurant.walk_to_parade}</p>
+          </div>
+        )
       })
     )
   }
