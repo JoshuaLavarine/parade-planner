@@ -1,15 +1,26 @@
 /* we have to add the card in the return in the Card Container in order to target it with CSS in this file. otherwise, we will have to style the cards within CardSection.css */
 
-.Card {
-  color: red;
+.pop-up {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
+
+.pop-up button {
+  background-color: #720b98;
+  color: gold;
+  border-radius: 15px;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: 500px;
 }
 
 .pop-up img {
-  width: 300px;
-  height: 300px;
+  width: 60%;
 }
 
-.restaurant-container{
+.restaurant-container {
   display: flex;
   width: 100%;
   overflow-x: auto;

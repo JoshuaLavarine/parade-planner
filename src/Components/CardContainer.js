@@ -9,7 +9,6 @@ class CardContainer extends Component {
       this.state = {
           isExpanded: false,
           id: -1
-          
       }
   }
   
@@ -25,10 +24,10 @@ class CardContainer extends Component {
      if (this.props.filteredParades) {
      return this.props.filteredParades.map(card => { 
       return <article className="container" name={card.id} >
-            <div className="individual-card" onClick={this.toggleCard} name={card.id}>
-              <img className="card-photo" src={card.img} name={card.id}/>
-              <h3 name={card.id}> {card.name} </h3>
-            </div>
+              <div className="individual-card" onClick={this.toggleCard} name={card.id}>
+                <img className="card-photo" src={card.img} name={card.id}/>
+                <h3 name={card.id}> {card.name} </h3>
+              </div>
             </article>
     })
   } else {
@@ -40,18 +39,25 @@ class CardContainer extends Component {
       
       switch(this.state.isExpanded){
         case(true):
-        return <Card 
-          parades={this.props.parades}
-          restaurants={this.props.restaurants}
-          id={this.state.id}
-          toggle={this.toggleCard}
-          />
+        return <div>
+          <Card 
+            parades={this.props.parades}
+            restaurants={this.props.restaurants}
+            id={this.state.id}
+            toggle={this.toggleCard}
+            />
+          <div>
+          <section className = "card-container">
+            {this.displayCards()}
+          </section>
+        </div>
+        </div>
         default:
           return(
             <div>
-            <section className = "card-container">
-              {this.displayCards()}
-            </section>
+              <section className = "card-container">
+                {this.displayCards()}
+              </section>
             </div>
       )
     }
