@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CardDetails from './CardDetails';
 import Card from './Card';
 import '../CardContainer.css';
 
@@ -22,13 +23,15 @@ class CardContainer extends Component {
 
    displayCards = () => {
      if (this.props.filteredParades) {
-     return this.props.filteredParades.map(card => { 
-      return <article className="container" name={card.id} >
-              <div className="individual-card" onClick={this.toggleCard} name={card.id}>
-                <img className="card-photo" src={card.img} name={card.id}/>
-                <h3 name={card.id}> {card.name} </h3>
-              </div>
-            </article>
+     return this.props.filteredParades.map(parade => { 
+       return <Card
+            parade={parade}
+            toggle={this.toggleCard}
+            />
+        
+            
+            
+   
     })
   } else {
     return null
@@ -36,29 +39,25 @@ class CardContainer extends Component {
 }
 
     render() {
-      
+      const parade = this.props.filteredParades.find((parade) => {
+       return parade.id == this.state.id;
+      })
       switch(this.state.isExpanded){
         case(true):
-        return <div>
-          <Card 
-            parades={this.props.parades}
+        return (
+          <CardDetails
+            parade={parade}
             restaurants={this.props.restaurants}
-            id={this.state.id}
+            
             toggle={this.toggleCard}
-            />
-          <div>
-          <section className = "card-container">
-            {this.displayCards()}
-          </section>
-        </div>
-        </div>
+            />)
         default:
           return(
-            <div>
+            // <div>
               <section className = "card-container">
                 {this.displayCards()}
               </section>
-            </div>
+            // </div>
       )
     }
   }     
