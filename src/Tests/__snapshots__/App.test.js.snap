@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should match the snapshot with all data passed in 1`] = `undefined`;
+exports[`App should match the snapshot with all data passed in 1`] = `
+<div
+  className="entire-page"
+>
+  <Header />
+  <FilterControls
+    parades={Array []}
+    restaurants={Array []}
+  />
+</div>
+`;

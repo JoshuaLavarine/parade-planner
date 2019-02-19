@@ -2,12 +2,13 @@
 // The other components did need mock data because the components needed props.
 
 import React from 'react';
-import App from '../Components/App';
+import ReactDOM from 'react-dom';
+import {App} from '../Components/App';
 import { shallow } from 'enzyme';
 
 
 // Do we need mock data here?
-const parades = [
+const mockData = [
 	{
 		"name": "Krewe of Little Rascals",
 		"location": "Metairie",
@@ -40,7 +41,13 @@ describe('App', () => {
     wrapper = shallow(
       <App />
     )
-  });
+	});
+	
+	it('should render without crashing', () => {
+		const div = document.createElement('div');
+		ReactDOM.render(<App/>, div);
+		ReactDOM.unmountComponentAtNode(div);
+	})
 
   it('should match the snapshot with all data passed in', () => {
     expect(wrapper).toMatchSnapshot();
@@ -48,11 +55,19 @@ describe('App', () => {
 
   it('should have a proper default state', () => {
     expect(wrapper.state()).toEqual({ parades: [], restaurants: [] });
-  });
+	});
+	
 
-  it('should update the state when getClickedLocation is called', () => {
-    expect(wrapper.state('location')).toEqual( '' );
-    wrapper.instance().getClickedLocation( 'Metairie' );
-    expect(wrapper.state('location')).toEqual( 'Metairie' );
-  });
+  // it('should get update state when getData is called', () => {
+	// 	expect(wrapper.state()).toEqual({ parades: [], restaurants: [] });
+	// 	fetch('http://whateverly-datasets.herokuapp.com/api/v1/restaurants') = jest.fn()
+	// 	getData(restaurants);
+		
+	// });
+	
+	it('should call getData with correct parameters', () => {
+		const getData = jest.fn()
+		wrapper.instance().getData('restaurants')
+		expect(getData).toHaveBeenCalled(1)
+	})
 });
