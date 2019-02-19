@@ -3,6 +3,9 @@
 .pop-up {
   margin: auto;
   width: 75%;
+  background-color: wheat;
+  border-radius: 25px;
+
 }
 
 .parade-section{
@@ -21,6 +24,13 @@
 
 .restaurant-container {
   display: flex;
-  width: 100%;
+  width: 90%;
   overflow-x: auto;
+  margin:auto;
+  padding:10px;
+}
+
+.parade-image {
+  height: 400px;
+  width:500px;
 }

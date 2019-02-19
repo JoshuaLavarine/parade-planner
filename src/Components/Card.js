@@ -22,7 +22,7 @@ class Card extends Component {
         <div className="parade-section">
           <button onClick={this.props.toggle}>X</button>
           <h1>{displayCard[0].name}</h1>
-          <img src={displayCard[0].img}/>
+          <img className="parade-image" src={displayCard[0].img}/>
           <p>location: {displayCard[0].location}</p>
           <p>{displayCard[0].date} | {displayCard[0].startTime}</p>
           <p>Number of Floats: {displayCard[0].numberOfFloats}</p>

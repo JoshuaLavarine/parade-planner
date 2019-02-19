@@ -5,7 +5,8 @@
     text-transform: capitalize;
     width: 500px;
     border-radius: 25px;
-
+    box-shadow: 2px 5px purple;
+    margin-bottom: 120px;
 }
 
 .individual-restaurant img {
@@ -31,10 +32,10 @@
     color: #720b98;
 }
 
-.img-and-name .rest-img {
+/* .img-and-name .rest-img {
     height: 150px;
     width: 200px;
-}
+} */
 
 .restaurant-info {
     margin-left: 15px;
