@@ -7,17 +7,18 @@
   background-color: wheat;
   border-radius: 25px;
   position:absolute;
-  top:0;
+  top: 226;
   left:0;
   right:0;
   bottom:0;
   overflow: scroll;
   z-index: 1;
+  border:solid black 4px
 }
 
 .parade-section{
   text-align: center;;
-  background-color: whitesmoke;
+  background-color: mediumpurple;
   border-radius: 25px;
   padding-bottom:15px;
 }

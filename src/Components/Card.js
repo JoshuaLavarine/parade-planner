@@ -28,9 +28,10 @@ class Card extends Component {
           <p className="parade-date">{displayCard[0].date} | {displayCard[0].startTime}</p>
           <p>Number of Floats: {displayCard[0].numberOfFloats}</p>
         </div> 
-        <div className="restaurant-container">
-          <Restaurant sortedRestaurants={sortRestaurants}/>
-        </div>
+        <h2>Restaurant's Near By!</h2>
+          <div className="restaurant-container">
+            <Restaurant sortedRestaurants={sortRestaurants}/>
+          </div>
         </div>
       </div>
     )

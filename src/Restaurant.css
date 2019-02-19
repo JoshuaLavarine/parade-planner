@@ -1,11 +1,11 @@
 .individual-restaurant{
     background-color: goldenrod;
     height: 440px;
-    margin-right: 7px;
+    margin-right: 12px;
     text-transform: capitalize;
     width: 500px;
     border-radius: 25px;
-    box-shadow: 2px 5px purple;
+    box-shadow: 4px 5px purple;
     margin-bottom: 120px;
 }
 
@@ -14,8 +14,7 @@
     margin-bottom: 10px;
     height: 191px;
     width: 300px;
-    /* border:1px black solid; */
-    border-radius: 25px;
+    border-radius: 25px 25px 0px 0px;
     background-color: purple;
 }
 
