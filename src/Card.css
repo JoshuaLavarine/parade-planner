@@ -2,8 +2,11 @@
 
 .pop-up {
   margin: auto;
-  text-align: center;
   width: 75%;
+}
+
+.parade-section{
+  text-align: center;
 }
 
 .pop-up button {
@@ -14,10 +17,6 @@
   width: 30px;
   position: relative;
   left: 500px;
-}
-
-.pop-up img {
-  width: 60%;
 }
 
 .restaurant-container {

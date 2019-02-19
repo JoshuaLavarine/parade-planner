@@ -47,11 +47,9 @@ class CardContainer extends Component {
             id={this.state.id}
             toggle={this.toggleCard}
             />
-          <div>
           <section className = "card-container">
             {this.displayCards()}
           </section>
-        </div>
         </div>
         default:
           return(
