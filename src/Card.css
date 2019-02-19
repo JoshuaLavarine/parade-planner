@@ -3,23 +3,36 @@
 .pop-up {
   margin: auto;
   width: 75%;
+  height: 75%;
   background-color: wheat;
   border-radius: 25px;
-
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  overflow: scroll;
+  z-index: 1;
 }
 
 .parade-section{
-  text-align: center;
+  text-align: center;;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding-bottom:15px;
 }
 
 .pop-up button {
   background-color: #720b98;
   color: gold;
+  font-weight: bolder;
+  font-size: 23px;
   border-radius: 15px;
-  height: 30px;
-  width: 30px;
+  height: 33px;
+  width: 33px;
   position: relative;
-  left: 500px;
+  left: 450px;
+  top: 13px;
 }
 
 .restaurant-container {
@@ -31,6 +44,16 @@
 }
 
 .parade-image {
-  height: 400px;
-  width:500px;
+  height: 200px;
+  width:280px;
+  margin-top:15px;
+}
+
+.pop-up-inner {
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  top: 2%;
+  bottom: 2%;
+  margin: auto;
 }
