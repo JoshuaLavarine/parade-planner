@@ -1,6 +1,7 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  padding-bottom: 180px;
 }
 
 .card-photo {
@@ -34,4 +35,14 @@ h3 {
 .individual-card {
   display: grid;
   width: 300px;
+}
+
+.parade-location {
+  font-size: 31px;
+  font-family: cursive;
+  margin: 0;
+}
+
+.parade-date {
+
 }

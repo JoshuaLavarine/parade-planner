@@ -1,15 +1,21 @@
 .individual-restaurant{
-    background-color: white;
-    /* border: .5px solid black; */
-    height: 300px;
-    margin-right: 7px;
-    padding: 5px;
+    background-color: goldenrod;
+    height: 440px;
+    margin-right: 12px;
     text-transform: capitalize;
-    width: 300px;
+    width: 500px;
+    border-radius: 25px;
+    box-shadow: 4px 5px purple;
+    margin-bottom: 120px;
 }
 
 .individual-restaurant img {
+    background-size: cover;
     margin-bottom: 10px;
+    height: 191px;
+    width: 300px;
+    border-radius: 25px 25px 0px 0px;
+    background-color: purple;
 }
 
 .themes {
@@ -25,12 +31,35 @@
     color: #720b98;
 }
 
-.img-and-name .rest-img {
+/* .img-and-name .rest-img {
     height: 150px;
     width: 200px;
+} */
+
+.restaurant-info {
+    margin-left: 15px;
+    font-family: monospace;
 }
 
-.individual-restaurant p {
-    font-size: 13px;
-    margin-bottom: -10px;
+
+.rest-name {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: bolder;
+    padding:1px;
+    text-decoration: overline;
+}
+
+.rest-tags{
+    font-size: 12px;
+    text-align: center;
+    /* border-style: double; */
+    padding:1px;
+    border-color: darkred;
+    border-radius: 45px;
+    font-weight: bold;
+    color: darkslateblue;
 }
