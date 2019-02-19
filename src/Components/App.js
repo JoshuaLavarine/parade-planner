@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+// import '../App.scss';
 import FilterControls from './FilterControls';
 import Header from './Header';
 

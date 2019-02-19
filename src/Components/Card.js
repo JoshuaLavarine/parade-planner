@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Restaurant from './Restaurant';
-import "../Card.css";
+// import "../Card.scss";
 
 
 class Card extends Component {
