@@ -3,23 +3,22 @@
 .pop-up {
   margin: auto;
   width: 75%;
-  height: 75%;
-  background-color: wheat;
+  background-color: #a781f5;
   border-radius: 25px;
-  position:absolute;
-  top: 226;
-  left:0;
-  right:0;
-  bottom:0;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
   overflow: scroll;
   z-index: 1;
-  border:solid black 4px;
-  opacity:.96;
+  border: solid black 4px;
+  opacity: .96;
 }
 
 .parade-section{
   text-align: center;
-  background-color: $purple;
+  background-color: darkseagreen;
   border-radius: 25px;
   padding-bottom:15px;
   margin-top: 38px;
@@ -40,8 +39,8 @@
   left: 677px;
   top: 31px;
   right: 35px;
-  &:hover{
-    background-color: $green;
+  &:hover {
+    background-color: #6c0a90fc;
   }
 }
 
