@@ -28,7 +28,7 @@ class Card extends Component {
               <img className="parade-image" src={displayCard[0].img}/>
             </div>
             <div className="loc-date-float">
-            <p className="parade-location">{displayCard[0].location}</p>
+            <p className="parade-location"><span className="located-in">Located in</span>{displayCard[0].location}</p>
             <p className="parade-date">{displayCard[0].date} | {displayCard[0].startTime}</p>
             <p className="num-floats">Number of Floats: {displayCard[0].numberOfFloats}</p>
             </div>

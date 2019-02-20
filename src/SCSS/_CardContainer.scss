@@ -21,6 +21,11 @@
   opacity: .6;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 h3 {
   font-family: cursive;
   // position: absolute;

@@ -49,6 +49,8 @@
   height: 300px;
   width: 350px;
   margin-left: 100px;
+  border-radius: 5px;
+
 }
 
 .pop-up-inner {
@@ -63,6 +65,7 @@
 .card-name {
   font-size: 35px;
   margin-top: -35px;
+  margin-bottom: 35px;
 }
 
 .pop-up-container {
@@ -84,4 +87,10 @@
 
 .num-floats {
   font-size: 20px;
+}
+
+.located-in {
+  font-family: monospace;
+  font-size: 30px;
+  display: block;
 }
