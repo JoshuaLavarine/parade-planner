@@ -34,7 +34,7 @@ class Card extends Component {
             </div>
           </div>
         </div> 
-        <h2>Restaurant's Near By!</h2>
+        <h2>Restaurants Nearby:</h2>
           <div className="restaurant-container">
             <Restaurant sortedRestaurants={sortRestaurants}/>
           </div>

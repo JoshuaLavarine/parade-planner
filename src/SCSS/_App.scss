@@ -1,4 +1,10 @@
+* {
+  &:focus {
+    outline: none;
+  }
+  margin: 0;
+}
 
 .entire-page {
-  background-image: linear-gradient(yellow, purple, green);
+  background-image: linear-gradient($gold, $purple, $green);
 } 

@@ -1,11 +1,10 @@
 .individual-restaurant{
-    background-color: goldenrod;
+    background-color: darkseagreen;
     height: 440px;
     margin-right: 12px;
     text-transform: capitalize;
     width: 500px;
     border-radius: 25px;
-    box-shadow: 4px 5px purple;
     margin-bottom: 35px;
 }
 
@@ -15,7 +14,7 @@
     height: 191px;
     width: 300px;
     border-radius: 25px 25px 0px 0px;
-    background-color: purple;
+    background-color: $purple;
 }
 
 .themes {
@@ -37,8 +36,10 @@
 } */
 
 .restaurant-info {
+    align-items: center;
     margin-left: 15px;
-    font-family: monospace;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -51,15 +52,24 @@
     font-weight: bolder;
     padding:1px;
     text-decoration: overline;
+    margin-bottom: 10px;
 }
 
-.rest-tags{
+.rest-tags {
     font-size: 12px;
     text-align: center;
-    /* border-style: double; */
     padding:1px;
     border-color: darkred;
     border-radius: 45px;
     font-weight: bold;
     color: darkslateblue;
+    margin-bottom: 24px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.rest-lines {
+  margin-bottom: 6px;
 }

@@ -30,13 +30,13 @@
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
-  background-color: purple;
-  color:gold;
+  background-color: $purple;
+  color:$gold;
   font-family: monospace;
   font-size: 20px;
 }
 
 .filter-button:hover {
-  background-color: green;
-  color:gold;
+  background-color: $green;
+  color: $gold;
 }

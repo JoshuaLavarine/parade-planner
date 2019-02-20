@@ -19,4 +19,14 @@ describe('App', () => {
   it('should have a proper default state', () => {
     expect(wrapper.state()).toEqual({ id: -1, isExpanded: false });
   });
+
+  // testing toggleCard 
+  it('should change state', () => {
+    
+  });
+
+  // testing displayCards
+  it('should have a proper default state', () => {
+
+  });
 });

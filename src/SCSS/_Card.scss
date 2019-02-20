@@ -3,38 +3,45 @@
 .pop-up {
   margin: auto;
   width: 75%;
-  height: 75%;
-  background-color: wheat;
+  background-color: #a781f5;
   border-radius: 25px;
-  position:absolute;
-  top: 226;
-  left:0;
-  right:0;
-  bottom:0;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
   overflow: scroll;
   z-index: 1;
-  border:solid black 4px;
-  opacity:.96;
+  border: solid black 4px;
+  opacity: .96;
 }
 
 .parade-section{
   text-align: center;
-  background-color: mediumpurple;
+  background-color: darkseagreen;
   border-radius: 25px;
   padding-bottom:15px;
+  margin-top: 38px;
 }
 
 .pop-up button {
-  background-color: $purple;
+  background-color: #720b98;
+  border: 0.5px solid gold;
   color: gold;
   font-weight: bolder;
   font-size: 23px;
   border-radius: 15px;
   height: 33px;
   width: 33px;
-  position: relative;
-  left: 450px;
-  top: 13px;
+  position: -webkit-sticky;
+  position: sticky;
+  float: right;
+  left: 677px;
+  top: 31px;
+  right: 35px;
+  &:hover {
+    background-color: #6c0a90fc;
+  }
 }
 
 .restaurant-container {
