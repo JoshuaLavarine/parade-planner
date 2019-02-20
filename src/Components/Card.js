@@ -22,11 +22,17 @@ class Card extends Component {
       <div className="pop-up-inner">
         <div className="parade-section">
           <button onClick={this.props.toggle}>X</button>
-          <h1>{displayCard[0].name}</h1>
-          <img className="parade-image" src={displayCard[0].img}/>
-          <p className="parade-location">{displayCard[0].location}</p>
-          <p className="parade-date">{displayCard[0].date} | {displayCard[0].startTime}</p>
-          <p>Number of Floats: {displayCard[0].numberOfFloats}</p>
+          <h1 className="card-name">{displayCard[0].name}</h1>
+          <div className="pop-up-container">
+            <div className="pop-up-photo">
+              <img className="parade-image" src={displayCard[0].img}/>
+            </div>
+            <div className="loc-date-float">
+            <p className="parade-location"><span className="located-in">Located in</span>{displayCard[0].location}</p>
+            <p className="parade-date">{displayCard[0].date} | {displayCard[0].startTime}</p>
+            <p className="num-floats">Number of Floats: {displayCard[0].numberOfFloats}</p>
+            </div>
+          </div>
         </div> 
         <h2>Restaurant's Near By!</h2>
           <div className="restaurant-container">

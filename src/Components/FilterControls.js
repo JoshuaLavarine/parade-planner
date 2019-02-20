@@ -40,10 +40,6 @@ class FilterControls extends Component {
     return (
       <div>
         <div className ="filters-section">
-          <div className="buttons">
-              <button className="filter-button"onClick={this.showAllParades}>Show All</button>
-              <button className="filter-button"onClick={this.resetFilter}>Reset Filters</button>
-            </div>
               <div className="filters">
                 <select className="filter" id="location" onChange={this.getClickedValue}>
                   <option value="">--Select Location--</option>
@@ -65,6 +61,10 @@ class FilterControls extends Component {
                   })
                 }
               </select>
+              <div className="buttons">
+              {/* <button className="filter-button"onClick={this.showAllParades}>Show All</button> */}
+              <button className="filter-button"onClick={this.resetFilter}>RESET</button>
+            </div>
             </div>
         </div>
         <CardContainer 
