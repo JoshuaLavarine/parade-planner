@@ -46,9 +46,9 @@
 }
 
 .parade-image {
-  height: 200px;
-  width:280px;
-  margin-top:15px;
+  height: 300px;
+  width: 350px;
+  margin-left: 100px;
 }
 
 .pop-up-inner {
@@ -58,4 +58,30 @@
   top: 2%;
   bottom: 2%;
   margin: auto;
+}
+
+.card-name {
+  font-size: 35px;
+  margin-top: -35px;
+}
+
+.pop-up-container {
+  display: flex;
+}
+
+.loc-date-float {
+  text-align: center;
+  width: 70%;
+}
+
+.parade-location {
+  font-size: 58px;
+}
+
+.parade-date {
+  font-size: 25px;
+}
+
+.num-floats {
+  font-size: 20px;
 }
