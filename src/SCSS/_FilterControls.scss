@@ -25,13 +25,18 @@
 }
 
 .filter-button{
-  height: 45px;
+  height: 38px;
   width: 95px;
-  font-size: 12px;
-  font-weight: 800;
   border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
   background-color: purple;
-  color:white;
+  color:gold;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.filter-button:hover {
+  background-color: green;
+  color:gold;
 }

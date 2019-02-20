@@ -12,29 +12,31 @@
   width: 300px;
   margin-left: 8px;
   margin-right: 8px;
-  opacity: .80;
+  opacity: 1;
   border-radius: 25px;
   margin-top: 25px;
 }
 
 .card-photo:hover {
-  opacity: 1;
+  opacity: .6;
 }
 
 h3 {
   font-family: cursive;
-  position: absolute;
+  // position: absolute;
   font-size: 27px;
   font-weight: 800;
   color:white;
-  text-align: center;
-  margin-top: 130px;
-  margin-left: 65px;
+  // text-align: center;
+  // margin-top: 130px;
+  // margin-left: 65px;
 }
 
 .individual-card {
   display: grid;
   width: 300px;
+  text-align: center;
+  margin-bottom:20px;
 }
 
 .parade-location {
@@ -43,6 +45,3 @@ h3 {
   margin: 0;
 }
 
-.parade-date {
-
-}
