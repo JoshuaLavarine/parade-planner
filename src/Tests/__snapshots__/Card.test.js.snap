@@ -1,5 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should match the snapshot 1`] = `undefined`;
-
-exports[`Card should match the snapshot with all data passed in 1`] = `undefined`;
+exports[`Card should match the snapshot with all data passed in 1`] = `
+<div
+  className="pop-up"
+>
+  <div
+    className="pop-up-inner"
+  >
+    <div
+      className="parade-section"
+    >
+      <button
+        onClick={[MockFunction]}
+      >
+        X
+      </button>
+      <h1
+        className="card-name"
+      >
+        Krewe of Little Rascals
+      </h1>
+      <div
+        className="pop-up-container"
+      >
+        <div
+          className="pop-up-photo"
+        >
+          <img
+            className="parade-image"
+            src="https://assets.simpleviewcms.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jefferson/37872354-littlerascals2-jpg0_cc32794e-5056-a36a-08469bbb1ddece75.jpg"
+          />
+        </div>
+        <div
+          className="loc-date-float"
+        >
+          <p
+            className="parade-location"
+          >
+            <span
+              className="located-in"
+            >
+              Located in
+            </span>
+            Metairie
+          </p>
+          <p
+            className="parade-date"
+          >
+            2/17/2019
+             | 
+            12:00pm
+          </p>
+          <p
+            className="num-floats"
+          >
+            Number of Floats: 
+            85
+          </p>
+        </div>
+      </div>
+    </div>
+    <h2>
+      Restaurant's Near By!
+    </h2>
+    <div
+      className="restaurant-container"
+    >
+      <Restaurant
+        sortedRestaurants={
+          Array [
+            Object {
+              "cuisine": Array [
+                "seafood",
+                "cajun",
+                "creole",
+                "classics",
+              ],
+              "distance_to_parade": ".5 miles",
+              "img": "https://www.neworleansonline.com/images/slideshows/listings/2952/05.jpg",
+              "location": "Metairie",
+              "name": "Acme Oyster House",
+              "rating": 4.5,
+              "walk_to_parade": "10 minutes",
+              "website": "https://acmeoyster.com/metairie/",
+            },
+            Object {
+              "cuisine": Array [
+                "eclectic",
+                "beer",
+                "mediterranean",
+                "teas",
+              ],
+              "distance_to_parade": "1.7 miles",
+              "img": "https://resizer.otstatic.com/v2/photos/wide-huge/24439769.jpg",
+              "location": "Metairie",
+              "name": "Zea Rotisserie & Bar",
+              "rating": 4.5,
+              "walk_to_parade": "35 minutes",
+              "website": "http://zearestaurants.com/locations/metairie/",
+            },
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
