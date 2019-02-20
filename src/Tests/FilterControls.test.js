@@ -53,6 +53,10 @@ describe('FilterControls', () => {
     )
   });
 
+  it('should have a proper default state', () => {
+    expect(wrapper.state()).toEqual({location: '', dayOrNight: '', date: ''})
+  });
+
   it('should update the state when getClickedValue is called', () => {
     expect(wrapper.state('location')).toEqual( '' );
     wrapper.find('#location').simulate('change', { target: { value: 'Metairie', id: "location"}});
@@ -118,7 +122,23 @@ describe('FilterControls', () => {
     const result = wrapper.instance().filterParades();
 
     expect(result).toHaveLength( 1 );
-  })
+  });
+
+  it('should reset the filters upon user click', () => {
+    wrapper.find('#location').simulate('change', { target: { value: 'Metairie', id: "location"}});
+    expect(wrapper.state('location')).toEqual("Metairie");
+
+    wrapper.find('#dayOrNight').simulate('change', { target: { value: 'am', id: "dayOrNight"}});
+    expect(wrapper.state('dayOrNight')).toEqual("am");
+    
+    wrapper.find('#date').simulate('change', { target: { value: '2/27/2019', id: "date"}});
+    expect(wrapper.state('date')).toEqual('2/27/2019');
+
+    wrapper.instance().resetFilter();
+
+
+    expect(wrapper.state()).toEqual({location: '', dayOrNight: '', date: ''})
+  });
 
 });
 
