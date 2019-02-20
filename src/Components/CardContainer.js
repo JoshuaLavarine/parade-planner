@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Card from './Card';
-// import '../CardContainer.scss';
-
 
 class CardContainer extends Component {
   constructor(){
@@ -12,7 +10,6 @@ class CardContainer extends Component {
       }
   }
 
-
   toggleCard = (event) => {
     this.setState({
       isExpanded: !this.state.isExpanded,
@@ -22,7 +19,7 @@ class CardContainer extends Component {
   }
 
    displayCards = () => {
-     if (this.props.filteredParades) {
+     if (this.props.filteredParades.length) {
      return this.props.filteredParades.map(card => { 
       return <article className="container" name={card.id} >
             <div className="individual-card" name={card.id}>
@@ -32,7 +29,7 @@ class CardContainer extends Component {
             </article>
     })
   } else {
-    return null
+    return <h3 className="no-results">No Parades Match Your Search Criteria</h3>
   }
 }
 

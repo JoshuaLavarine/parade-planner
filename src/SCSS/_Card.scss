@@ -22,22 +22,24 @@
   background-color: $purple;
   border-radius: 25px;
   padding-bottom:15px;
+  margin-top: 38px;
 }
 
 .pop-up button {
-  background-color: $purple;
-  border: 0.5px solid $gold;
-  color: $gold;
+  background-color: #720b98;
+  border: 0.5px solid gold;
+  color: gold;
   font-weight: bolder;
   font-size: 23px;
   border-radius: 15px;
   height: 33px;
   width: 33px;
+  position: -webkit-sticky;
   position: sticky;
-  float:right;
-  margin-right: 10px;
-  left: 700px;
-  top: 13px;
+  float: right;
+  left: 677px;
+  top: 31px;
+  right: 35px;
   &:hover{
     background-color: $green;
   }
