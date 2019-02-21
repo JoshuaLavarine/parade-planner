@@ -1,44 +1,44 @@
 /* we have to add the card in the return in the Card Container in order to target it with CSS in this file. otherwise, we will have to style the cards within CardSection.css */
 
 .pop-up {
-  margin: auto;
-  width: 75%;
   background-color: #a781f5;
-  border-radius: 25px;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  right: 0;
-  bottom: 100px;
-  overflow: scroll;
-  z-index: 1;
   border: solid black 4px;
+  border-radius: 25px;
+  bottom: 100px;
+  left: 0;
+  margin: auto;
+  overflow: scroll;
   opacity: .96;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 75%;
+  z-index: 1;
 }
 
 .parade-section{
-  text-align: center;
   background-color: darkseagreen;
   border-radius: 25px;
   padding-bottom:15px;
   margin-top: 38px;
+  text-align: center;
 }
 
 .pop-up button {
   background-color: #720b98;
   border: 0.5px solid $gold;
-  color: $gold;
-  font-weight: bolder;
-  font-size: 23px;
   border-radius: 15px;
+  color: $gold;
+  float: right;
+  font-size: 23px;
+  font-weight: bolder;
   height: 33px;
-  width: 33px;
+  left: 677px;
   position: -webkit-sticky;
   position: sticky;
-  float: right;
-  left: 677px;
-  top: 31px;
   right: 35px;
+  top: 31px;
+  width: 33px;
   &:hover {
     background-color: #6c0a90fc;
   }
@@ -84,8 +84,8 @@
 }
 
 .parade-location {
-  font-size: 58px;
   font-family: $fancy;
+  font-size: 58px;
 }
 
 .parade-date {
@@ -93,12 +93,12 @@
 }
 
 .num-floats {
-  font-family: $fancy;
-  display: block;
-  font-weight: bold;
-  font-size: 36px;
-  animation: color 7s ease 0s infinite alternate; 
+  animation: color 7s ease 0s infinite alternate;
   animation-fill-mode: forwards;
+  display: block;
+  font-family: $fancy;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .located-in {

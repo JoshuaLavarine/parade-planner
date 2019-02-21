@@ -1,69 +1,49 @@
 .individual-restaurant{
     background-color: darkseagreen;
+    border-radius: 25px;
     height: 440px;
+    margin-bottom: 35px;
     margin-right: 12px;
     text-transform: capitalize;
     width: 500px;
-    border-radius: 25px;
-    margin-bottom: 35px;
 }
 
 .individual-restaurant img {
     background-size: cover;
-    margin-bottom: 10px;
-    height: 191px;
-    width: 300px;
     border-radius: 25px 25px 0px 0px;
-    background-color: $purple;
+    height: 191px;
+    margin-bottom: 10px;
+    width: 300px;
 }
-
-.themes {
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: lowercase;
-}
-
-.link {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #720b98;
-}
-
-/* .img-and-name .rest-img {
-    height: 150px;
-    width: 200px;
-} */
 
 .restaurant-info {
     align-items: center;
-    margin-left: 15px;
     display: flex;
     flex-direction: column;
+    font-family: $desc;
+    margin-left: 15px;
 }
 
 
 .rest-name {
-    text-align: center;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-family: cursive;
-    font-size: 16px;
+    font-family: $fancy;
+    font-size: 20px;
     font-weight: bolder;
-    padding:1px;
-    text-decoration: overline;
     margin-bottom: 10px;
+    margin-top: 2px;
+    padding:1px;
+    text-align: center;
+    text-decoration: overline;
 }
 
 .rest-tags {
-    font-size: 12px;
-    text-align: center;
-    padding:1px;
-    border-color: darkred;
-    border-radius: 45px;
-    font-weight: bold;
     color: darkslateblue;
+    font-family: $desc;
+    font-size: 14px;
     margin-bottom: 24px;
+    padding:1px;
+    text-align: center;
+    text-transform: lowercase;
 }
 
 .bold {
@@ -72,4 +52,8 @@
 
 .rest-lines {
   margin-bottom: 6px;
+}
+
+.rest-link {
+    margin-top: 10px;
 }

@@ -1,21 +1,19 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  padding-bottom: 180px;
   min-height: 500px;
+  padding-bottom: 180px;
 }
 
 .card-photo {
-  position: relative;
-  flex-wrap: flex;
-  justify-content: space-between;
-  height: 250px;
-  width: 300px;
-  margin-left: 8px;
-  margin-right: 8px;
-  opacity: 1;
   border-radius: 25px;
-  margin-top: 25px;
+  flex-wrap: flex;
+  height: 250px;
+  justify-content: space-between;
+  margin: 25px 8px 0px 8px;
+  opacity: 1;
+  position: relative;
+  width: 300px;
 }
 
 .card-photo:hover {
@@ -28,17 +26,17 @@
 }
 
 h3 {
+  color:white;
   font-family: $fancy;
   font-size: 27px;
   font-weight: 800;
-  color:white;
 }
 
 .individual-card {
   display: grid;
-  width: 300px;
-  text-align: center;
   margin-bottom:20px;
+  text-align: center;
+  width: 300px;
 }
 
 .parade-location {
@@ -47,17 +45,17 @@ h3 {
 }
 
 .no-results {
-  text-align: center;
   margin-top: 30px;
+  text-align: center;
 }
 
 .screen {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-image: url('https://wallpapercave.com/wp/rby2aDk.jpg');
+  bottom: 0;
   background-size: cover;
-  opacity: 3.5
+  left: 0;
+  opacity: 3.5;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

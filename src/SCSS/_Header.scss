@@ -1,7 +1,7 @@
 .Header {
   background-image: url(https://www.smartertravel.com/uploads/2017/03/shutterstock_538251475-1400x500.jpg);
-  height: 280px;
   background-size: cover;
+  height: 280px;
   opacity: .9;
 }
 
@@ -9,9 +9,9 @@ h1, h2 {
   color: #fff;
   font-family: $header;
   letter-spacing: .3em;
+  padding: 30px 0;
   text-align: center;
   text-shadow: 0.1em 0.1em 0.15em $purple;
-  padding: 30px 0;
 }
 
 h1{

@@ -5,11 +5,11 @@
 
 .filter {
   height: 40px;
-  width: 200px;
   margin-left: 10px;
   margin-right: 10px;
-  font-weight: 600;
   font-size: 15px;
+  font-weight: 600;
+  width: 200px;
 }
 
 .filters{
@@ -25,19 +25,18 @@
 }
 
 .filter-button{
-  height: 38px;
-  width: 95px;
-  border-radius: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
   background-color: $purple;
+  border-color: $green;
+  border-radius: 25px;
   color: $gold;
   font-family: $desc;
   font-size: 20px;
-  border-color: $green;
-}
-
-.filter-button:hover {
-  background-color: $green;
-  color: $purple;
+  height: 38px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 95px;
+  &:hover {
+    background-color: $green;
+    color: $purple;
+  }
 }
