@@ -56,10 +56,16 @@ class FilterControls extends Component {
                 <option value="" selected="selected">--Select Date--</option>
                 {this.props.parades.reduce((acc, currentParade) => {
                   if(!acc.includes(currentParade.date)){acc.push(currentParade.date)}
-                    return acc
-                  },[]).map((name)=> {
+
+                  acc.sort((date1, date2) => {
+                    date1 = date1.split('-').reverse().join('');
+                    date2 = date2.split('-').reverse().join('');
+                    return date1.localeCompare(date2);
+                });
+                    return acc;
+                },[]).map((name)=> {
                     return (<option value={[name]}>{[name]}</option>)
-                  })
+                })
                 }
               </select>
               <div className="buttons">
