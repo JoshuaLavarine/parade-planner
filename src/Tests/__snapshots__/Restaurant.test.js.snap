@@ -4,6 +4,7 @@ exports[`Restaurant should match the snapshot with all data passed in 1`] = `
 Array [
   <div
     className="individual-restaurant"
+    key="0"
   >
     <img
       src="https://www.neworleansonline.com/images/slideshows/listings/2952/05.jpg"
@@ -59,6 +60,7 @@ Array [
       <a
         className="rest-link"
         href="https://acmeoyster.com/metairie/"
+        rel="noopener noreferrer"
         target="_blank"
       >
         ACME OYSTER HOUSE
@@ -67,6 +69,7 @@ Array [
   </div>,
   <div
     className="individual-restaurant"
+    key="1"
   >
     <img
       src="https://resizer.otstatic.com/v2/photos/wide-huge/24439769.jpg"
@@ -122,6 +125,7 @@ Array [
       <a
         className="rest-link"
         href="http://zearestaurants.com/locations/metairie/"
+        rel="noopener noreferrer"
         target="_blank"
       >
         ZEA ROTISSERIE & BAR
