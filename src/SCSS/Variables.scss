@@ -2,4 +2,30 @@
 
 $purple: #720b98;
 $gold: gold;
-$green: green
+$green: green;
+
+$desc: 'Ubuntu', sans-serif;
+$header: 'Syncopate', sans-serif;
+$fancy: 'Kaushan Script', cursive;
+
+
+
+
+
+
+@keyframes color {
+  0% {
+    color: $gold;
+    opacity: 0;
+  }
+  33% {
+    color: $purple;
+    opacity: 1;
+  }
+  66% {
+    color: $green;
+  }
+  100% {
+    color: $gold;
+  }
+}

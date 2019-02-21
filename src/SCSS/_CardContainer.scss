@@ -28,14 +28,10 @@
 }
 
 h3 {
-  font-family: cursive;
-  // position: absolute;
+  font-family: $fancy;
   font-size: 27px;
   font-weight: 800;
   color:white;
-  // text-align: center;
-  // margin-top: 130px;
-  // margin-left: 65px;
 }
 
 .individual-card {
@@ -47,7 +43,6 @@ h3 {
 
 .parade-location {
   font-size: 31px;
-  font-family: cursive;
   margin: 0;
 }
 
