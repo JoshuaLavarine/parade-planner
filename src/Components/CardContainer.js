@@ -11,11 +11,11 @@ class CardContainer extends Component {
   }
 
   toggleCard = (event) => {
+    console.log(event.target.name);
     this.setState({
       isExpanded: !this.state.isExpanded,
       id: event.target.name
     })
-    console.log(event.target)
   }
 
    displayCards = () => {

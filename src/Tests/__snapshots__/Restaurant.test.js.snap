@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Restaurant should match the snapshot with all data passed in 1`] = `
+Array [
+  <div
+    className="individual-restaurant"
+  >
+    <img
+      src="https://www.neworleansonline.com/images/slideshows/listings/2952/05.jpg"
+    />
+    <h5
+      className="rest-name"
+    >
+      Acme Oyster House
+    </h5>
+    <p
+      className="rest-tags"
+    >
+      #
+      seafood #cajun #creole #classics
+    </p>
+    <div
+      className="restaurant-info"
+    >
+      <p
+        className="rest-lines"
+      >
+        <span
+          className="bold"
+        >
+          Rating:
+        </span>
+         
+        4.5
+         / 5.0
+      </p>
+      <p
+        className="rest-lines"
+      >
+        <span
+          className="bold"
+        >
+          Distance:
+        </span>
+         
+        .5 miles
+      </p>
+      <p
+        className="rest-lines"
+      >
+        <span
+          className="bold"
+        >
+          Walk-time:
+        </span>
+         
+        10 minutes
+      </p>
+      <a
+        className="rest-link"
+        href="https://acmeoyster.com/metairie/"
+        target="_blank"
+      >
+        ACME OYSTER HOUSE
+      </a>
+    </div>
+  </div>,
+  <div
+    className="individual-restaurant"
+  >
+    <img
+      src="https://resizer.otstatic.com/v2/photos/wide-huge/24439769.jpg"
+    />
+    <h5
+      className="rest-name"
+    >
+      Zea Rotisserie & Bar
+    </h5>
+    <p
+      className="rest-tags"
+    >
+      #
+      eclectic #beer #mediterranean #teas
+    </p>
+    <div
+      className="restaurant-info"
+    >
+      <p
+        className="rest-lines"
+      >
+        <span
+          className="bold"
+        >
+          Rating:
+        </span>
+         
+        4.5
+         / 5.0
+      </p>
+      <p
+        className="rest-lines"
+      >
+        <span
+          className="bold"
+        >
+          Distance:
+        </span>
+         
+        1.7 miles
+      </p>
+      <p
+        className="rest-lines"
+      >
+        <span
+          className="bold"
+        >
+          Walk-time:
+        </span>
+         
+        35 minutes
+      </p>
+      <a
+        className="rest-link"
+        href="http://zearestaurants.com/locations/metairie/"
+        target="_blank"
+      >
+        ZEA ROTISSERIE & BAR
+      </a>
+    </div>
+  </div>,
+]
+`;

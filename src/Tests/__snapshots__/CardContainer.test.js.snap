@@ -4,6 +4,79 @@ exports[`App should match the snapshot with all data passed in 1`] = `
 <div>
   <section
     className="card-container"
-  />
+  >
+    <article
+      className="container"
+      name={1}
+    >
+      <div
+        className="individual-card"
+        name={1}
+      >
+        <img
+          className="card-photo"
+          name={1}
+          onClick={[Function]}
+          src="https://assets.simpleviewcms.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/jefferson/37872354-littlerascals2-jpg0_cc32794e-5056-a36a-08469bbb1ddece75.jpg"
+        />
+        <h3
+          className="card-title"
+          name={1}
+        >
+           
+          Krewe of Little Rascals
+           
+        </h3>
+      </div>
+    </article>
+    <article
+      className="container"
+      name={2}
+    >
+      <div
+        className="individual-card"
+        name={2}
+      >
+        <img
+          className="card-photo"
+          name={2}
+          onClick={[Function]}
+          src="https://www.hlimg.com/images/events/738X538/25mardi6502_1546063931e.jpg"
+        />
+        <h3
+          className="card-title"
+          name={2}
+        >
+           
+          Krewe of Excalibur
+           
+        </h3>
+      </div>
+    </article>
+    <article
+      className="container"
+      name={3}
+    >
+      <div
+        className="individual-card"
+        name={3}
+      >
+        <img
+          className="card-photo"
+          name={3}
+          onClick={[Function]}
+          src="https://d23xispzx43ico.cloudfront.net/wp-content/uploads/2015/02/0212-babylon-knights.jpg"
+        />
+        <h3
+          className="card-title"
+          name={3}
+        >
+           
+          Krewe of Babylon
+           
+        </h3>
+      </div>
+    </article>
+  </section>
 </div>
 `;
