@@ -42,3 +42,7 @@ This function caused us much heartache on the main Parade Planner code, so it al
 Another big win we had was to reset our drop down bars. We had some issues with how exactly we could reset their value but it ended up being a pretty quick and easy fix!
 
 # SCREENSHOTS
+
+[![Screen-Shot-2019-02-21-at-10-05-12-AM.png](https://i.postimg.cc/mgKqS2tN/Screen-Shot-2019-02-21-at-10-05-12-AM.png)](https://postimg.cc/21F2kYdV)
+
+[![Screen-Shot-2019-02-21-at-10-06-01-AM.png](https://i.postimg.cc/WbB6WDw3/Screen-Shot-2019-02-21-at-10-06-01-AM.png)](https://postimg.cc/ppBFyL7b)
