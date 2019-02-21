@@ -26,8 +26,8 @@
 
 .pop-up button {
   background-color: #720b98;
-  border: 0.5px solid gold;
-  color: gold;
+  border: 0.5px solid $gold;
+  color: $gold;
   font-weight: bolder;
   font-size: 23px;
   border-radius: 15px;
@@ -46,27 +46,26 @@
 
 .restaurant-container {
   display: flex;
-  width: 90%;
+  margin: auto;
   overflow-x: auto;
-  margin:auto;
   padding:10px;
+  width: 90%;
 }
 
 .parade-image {
-  height: 300px;
-  width: 350px;
-  margin-left: 100px;
   border-radius: 5px;
-
+  height: 300px;
+  margin-left: 100px;
+  width: 350px;
 }
 
 .pop-up-inner {
-  position: absolute;
+  bottom: 2%;
   left: 2%;
+  margin: auto;
+  position: absolute;
   right: 2%;
   top: 2%;
-  bottom: 2%;
-  margin: auto;
 }
 
 .card-name {
@@ -86,6 +85,7 @@
 
 .parade-location {
   font-size: 58px;
+  font-family: $fancy;
 }
 
 .parade-date {
@@ -93,11 +93,16 @@
 }
 
 .num-floats {
-  font-size: 20px;
+  font-family: $fancy;
+  display: block;
+  font-weight: bold;
+  font-size: 36px;
+  animation: color 7s ease 0s infinite alternate; 
+  animation-fill-mode: forwards;
 }
 
 .located-in {
-  font-family: monospace;
+  font-family: $desc;
   font-size: 30px;
   display: block;
 }

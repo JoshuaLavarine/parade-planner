@@ -31,12 +31,13 @@
   margin-left: 10px;
   margin-right: 10px;
   background-color: $purple;
-  color:$gold;
-  font-family: monospace;
+  color: $gold;
+  font-family: $desc;
   font-size: 20px;
+  border-color: $green;
 }
 
 .filter-button:hover {
   background-color: $green;
-  color: $gold;
+  color: $purple;
 }
