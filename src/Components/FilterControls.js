@@ -40,19 +40,20 @@ class FilterControls extends Component {
     return (
       <div>
         <div className ="filters-section">
+          <form>
               <div className="filters">
-                <select className="filter" id="location" onChange={this.getClickedValue}>
-                  <option value="">--Select Location--</option>
+                <select className="filter" id="location" onChange={this.getClickedValue} >
+                  <option value="" selected="selected">--Select Location--</option>
                   <option value="Metairie">Metairie</option>
                   <option value="Uptown New Orleans">Uptown New Orleans</option>
                 </select>
                 <select className="filter" id="dayOrNight" onChange={this.getClickedValue}>
-                  <option value="">--Select Time--</option>
+                  <option value="" selected="selected">--Select Time--</option>
                   <option value="am">AM</option>
                   <option value="pm">PM</option>
                 </select>
               <select className="filter" id="date" onChange={this.getClickedValue}>
-                <option value="">--Select Date--</option>
+                <option value="" selected="selected">--Select Date--</option>
                 {this.props.parades.reduce((acc, currentParade) => {
                   if(!acc.includes(currentParade.date)){acc.push(currentParade.date)}
                     return acc
@@ -62,16 +63,15 @@ class FilterControls extends Component {
                 }
               </select>
               <div className="buttons">
-              {/* <button className="filter-button"onClick={this.showAllParades}>Show All</button> */}
-              <button className="filter-button"onClick={this.resetFilter}>RESET</button>
+                <button className="filter-button" onClick={this.resetFilter} type="reset">RESET</button>
+              </div>
             </div>
-            </div>
+          </form>
         </div>
         <CardContainer 
         filteredParades={this.filterParades()}
         parades={this.props.parades}
         restaurants={this.props.restaurants}
-
         />
       </div>
     )
