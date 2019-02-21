@@ -1,8 +1,8 @@
-import React from 'react';
-import Card from '../Components/Card';
-import { shallow } from 'enzyme';
+import React from "react";
+import Card from "../Components/Card";
+import { shallow } from "enzyme";
 
-describe('Card', () => {
+describe("Card", () => {
 
   const mockParades = [
     {
@@ -39,28 +39,28 @@ describe('Card', () => {
       "id": 3,
       "img": "https://d23xispzx43ico.cloudfront.net/wp-content/uploads/2015/02/0212-babylon-knights.jpg"
     }
-  ]
+  ];
   const mockRestaurants = [
     {
-		"name": "Acme Oyster House",
-    "location": "Metairie",
-		"distance_to_parade": ".5 miles",
-    "walk_to_parade": "10 minutes",
-		"cuisine": ["seafood", "cajun", "creole", "classics"],
-		"rating": 4.5,
-		"img": "https://www.neworleansonline.com/images/slideshows/listings/2952/05.jpg",
-		"website": "https://acmeoyster.com/metairie/"
-	},
+      "name": "Acme Oyster House",
+      "location": "Metairie",
+      "distance_to_parade": ".5 miles",
+      "walk_to_parade": "10 minutes",
+      "cuisine": ["seafood", "cajun", "creole", "classics"],
+      "rating": 4.5,
+      "img": "https://www.neworleansonline.com/images/slideshows/listings/2952/05.jpg",
+      "website": "https://acmeoyster.com/metairie/"
+    },
     {
-		"name": "Zea Rotisserie & Bar",
-    "location": "Metairie",
-		"distance_to_parade": "1.7 miles",
-    "walk_to_parade": "35 minutes",
-		"cuisine": ["eclectic", "beer", "mediterranean", "teas"],
-		"rating": 4.5,
-		"img": "https://resizer.otstatic.com/v2/photos/wide-huge/24439769.jpg",
-		"website": "http://zearestaurants.com/locations/metairie/"
-  }]
+      "name": "Zea Rotisserie & Bar",
+      "location": "Metairie",
+      "distance_to_parade": "1.7 miles",
+      "walk_to_parade": "35 minutes",
+      "cuisine": ["eclectic", "beer", "mediterranean", "teas"],
+      "rating": 4.5,
+      "img": "https://resizer.otstatic.com/v2/photos/wide-huge/24439769.jpg",
+      "website": "http://zearestaurants.com/locations/metairie/"
+    }];
   
   const mockToggleCard = jest.fn();
   
@@ -69,19 +69,19 @@ describe('Card', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Card parades={mockParades}
-      restaurants={mockRestaurants}
-      id={1}
-      toggle={mockToggleCard}/>
-    )
+        restaurants={mockRestaurants}
+        id={1}
+        toggle={mockToggleCard}/>
+    );
   });
 
-  it('should match the snapshot with all data passed in', () => {
+  it("should match the snapshot with all data passed in", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call toggle function when button is clicked', () => {
-    wrapper.find('button').simulate('click');
+  it("should call toggle function when button is clicked", () => {
+    wrapper.find("button").simulate("click");
     expect(mockToggleCard).toHaveBeenCalled();
-  })
+  });
 
-})
+});

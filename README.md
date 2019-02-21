@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WHATEVERLY...
+is a project that was intended for the developer to solidify their knowledge of React, datasets, navigating datasets, array prototypes, fetch API, object oriented programming, and working with other developers in a group setting.
 
-## Available Scripts
+# INSTALL INSTRUCTIONS
 
 In the project directory, you can run:
 
-### `npm start`
+   # npm start
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-The page will reload if you make edits.<br>
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+# TECH / FRAMEWORKS USED
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- Sass
+- JSX
+- fetch API
+- Testing with Enzyme & Jest
 
-### `npm run build`
+# WHAT WE LEARNED
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We learned how to coordinate work across a larger group of people than we've worked with in the past. We were able to really dive deeper into React and work with components and how they interact with one another. We learned how to write effective tests in Enzyme as well as how to write Sass for more efficient CSS.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+# WISH LIST / WHAT'S LEFT / FUTURE ITERATIONS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- We wanted to add an odometer for the count of floats for each pop up.
 
-### `npm run eject`
+- We had been hoping to randomize the restaurants that appear for a user's choice but we were unable to get that far.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- We had also been hoping to implement some visual content but simply ran out of time after prioritizing our MVP.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# PROJECT WINS & CHALLENGES
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+We started off with three filter functions, one for each option but when we worked with combining them we were able to rewrite them all into a single function which handles all three user options.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This function caused us much heartache on the main Parade Planner code, so it also caused us issues when we tested it. It wasn't bad in retrospect, but it was our most thoughtout test considering it handles a large portion of our functionality.
 
-## Learn More
+Another big win we had was to reset our drop down bars. We had some issues with how exactly we could reset their value but it ended up being a pretty quick and easy fix!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# SCREENSHOTS

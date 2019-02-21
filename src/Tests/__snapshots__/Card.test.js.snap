@@ -61,7 +61,7 @@ exports[`Card should match the snapshot with all data passed in 1`] = `
       </div>
     </div>
     <h2>
-      Restaurant's Near By!
+      Restaurants Nearby:
     </h2>
     <div
       className="restaurant-container"

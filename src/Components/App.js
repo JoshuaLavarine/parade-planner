@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import '../App.scss';
-import FilterControls from './FilterControls';
-import Header from './Header';
+import FilterControls from "./FilterControls";
+import Header from "./Header";
 
 class App extends Component {
   constructor() {
@@ -9,31 +9,31 @@ class App extends Component {
     this.state = {
       parades : [],
       restaurants : [],
-    }
+    };
   }
 
 
   componentDidMount() {
-    fetch('http://whateverly-datasets.herokuapp.com/api/v1/restaurants')
-    .then(response => response.json())
-    .then(data => {
+    fetch("http://whateverly-datasets.herokuapp.com/api/v1/restaurants")
+      .then(response => response.json())
+      .then(data => {
         this.setState({
           restaurants: data.restaurants
-        })
+        });
       })
       .catch(error => {
-        throw new Error(error)
+        throw new Error(error);
       });
 
-    fetch('http://whateverly-datasets.herokuapp.com/api/v1/parades')
+    fetch("http://whateverly-datasets.herokuapp.com/api/v1/parades")
       .then(response => response.json())
       .then(data => {
         this.setState({
           parades: data.parades
-        })
+        });
       })
       .catch(error => {
-        throw new Error(error)
+        throw new Error(error);
       });
   }
   
@@ -42,8 +42,8 @@ class App extends Component {
       <div className="entire-page">
         <Header />
         <FilterControls 
-        parades={this.state.parades}
-        restaurants={this.state.restaurants}
+          parades={this.state.parades}
+          restaurants={this.state.restaurants}
         />
       </div>
     );
