@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import Restaurant from './Restaurant';
-// import "../Card.scss";
 
 
 class Card extends Component {
-  constructor() {
-    super();
-  }
-  
 
   render() {
     const displayCard = this.props.parades.filter((parade) => {

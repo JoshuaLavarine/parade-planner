@@ -15,13 +15,12 @@ class CardContainer extends Component {
       isExpanded: !this.state.isExpanded,
       id: event.target.name
     })
-    console.log(event.target)
   }
 
    displayCards = () => {
      if (this.props.filteredParades.length) {
-     return this.props.filteredParades.map(card => { 
-      return <article className="container" name={card.id} >
+     return this.props.filteredParades.map((card, index) => { 
+      return <article className="container" name={card.id} key={index}>
             <div className="individual-card" name={card.id}>
               <img onClick={this.toggleCard} className="card-photo" src={card.img} name={card.id}/>
               <h3 className="card-title" name={card.id}> {card.name} </h3>
