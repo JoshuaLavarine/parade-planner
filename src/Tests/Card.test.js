@@ -82,6 +82,6 @@ describe('Card', () => {
   it('should call toggle function when button is clicked', () => {
     wrapper.find('button').simulate('click');
     expect(mockToggleCard).toHaveBeenCalled();
-  })
+  });
 
 })

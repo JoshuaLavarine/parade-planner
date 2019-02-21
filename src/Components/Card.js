@@ -3,10 +3,6 @@ import Restaurant from './Restaurant';
 
 
 class Card extends Component {
-  constructor() {
-    super();
-  }
-  
 
   render() {
     const displayCard = this.props.parades.filter((parade) => {

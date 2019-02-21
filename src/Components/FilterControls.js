@@ -63,8 +63,8 @@ class FilterControls extends Component {
                     return date1.localeCompare(date2);
                 });
                     return acc;
-                },[]).map((name)=> {
-                    return (<option value={[name]}>{[name]}</option>)
+                },[]).map((name, index)=> {
+                    return (<option key={index} value={[name]}>{[name]}</option>)
                 })
                 }
               </select>
