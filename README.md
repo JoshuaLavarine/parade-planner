@@ -3,14 +3,14 @@ is a project that was intended for the developer to solidify their knowledge of 
 
 # INSTALL INSTRUCTIONS
 
-In the project directory, you can run:
+In the project directory, please run:
 
-   # npm start
+#### npm start
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+npm start will run the app in the development mode.
+Once the server is running, open http://localhost:3000 to view it in the browser.
 
-The page will reload if you make edits.
+The page will reload if any alterations to the code are made.
 You will also see any lint errors in the console.
 
 # TECH / FRAMEWORKS USED
