@@ -1,11 +1,11 @@
-# WHATEVERLY...
-is a project that was intended for the developer to solidify their knowledge of React, datasets, navigating datasets, array prototypes, fetch API, object oriented programming, and working with other developers in a group setting.
+# Parade Planner
+Parade Planner is a project that was intended to solidify our knowledge of React, datasets, navigating datasets, array prototypes, fetch API, object oriented programming, and working with other developers in a group setting.
 
-# INSTALL INSTRUCTIONS
+## INSTALL INSTRUCTIONS
 
 In the project directory, please run:
 
-#### npm start
+### npm start
 
 npm start will run the app in the development mode.
 Once the server is running, open http://localhost:3000 to view it in the browser.
@@ -13,7 +13,7 @@ Once the server is running, open http://localhost:3000 to view it in the browser
 The page will reload if any alterations to the code are made.
 You will also see any lint errors in the console.
 
-# TECH / FRAMEWORKS USED
+## TECH / FRAMEWORKS USED
 
 - React
 - Sass
@@ -21,11 +21,11 @@ You will also see any lint errors in the console.
 - fetch API
 - Testing with Enzyme & Jest
 
-# WHAT WE LEARNED
+## WHAT WE LEARNED
 
 We learned how to coordinate work across a larger group of people than we've worked with in the past. We were able to really dive deeper into React and work with components and how they interact with one another. We learned how to write effective tests in Enzyme as well as how to write Sass for more efficient CSS.
 
-# WISH LIST / WHAT'S LEFT / FUTURE ITERATIONS
+## WISH LIST / WHAT'S LEFT / FUTURE ITERATIONS
 
 - We wanted to add an odometer for the count of floats for each pop up.
 
@@ -33,7 +33,7 @@ We learned how to coordinate work across a larger group of people than we've wor
 
 - We had also been hoping to implement some visual content but simply ran out of time after prioritizing our MVP.
 
-# PROJECT WINS & CHALLENGES
+## PROJECT WINS & CHALLENGES
 
 We started off with three filter functions, one for each option but when we worked with combining them we were able to rewrite them all into a single function which handles all three user options.
 
@@ -41,10 +41,13 @@ This function caused us much heartache on the main Parade Planner code, so it al
 
 Another big win we had was to reset our drop down bars. We had some issues with how exactly we could reset their value but it ended up being a pretty quick and easy fix!
 
-# SCREENSHOTS
+## SCREENSHOTS
 
 [![Screen-Shot-2019-02-21-at-10-05-12-AM.png](https://i.postimg.cc/mgKqS2tN/Screen-Shot-2019-02-21-at-10-05-12-AM.png)](https://postimg.cc/21F2kYdV)
 
 [![Screen-Shot-2019-02-21-at-10-06-01-AM.png](https://i.postimg.cc/WbB6WDw3/Screen-Shot-2019-02-21-at-10-06-01-AM.png)](https://postimg.cc/ppBFyL7b)
 
 [![Screen-Shot-2019-02-21-at-10-07-30-AM.png](https://i.postimg.cc/jS6NMMjg/Screen-Shot-2019-02-21-at-10-07-30-AM.png)](https://postimg.cc/tsTYTtWW)
+
+## Credits
+http://frontend.turing.io/projects/whateverly.html
